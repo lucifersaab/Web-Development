@@ -3,31 +3,41 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h2 {
   font-size: 1.75em;
 }
 
+hr {
+  width: 100%;
+}
 .main-heading {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .main-container {
-  height: 100%;
-  width: 100%;
+  /* height: 100vh; */
+  width: 100vw;
   display: flex;
   align-content: center;
   justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 26, 58, 1) 0%,
+    rgba(66, 8, 57, 1) 51%,
+    rgba(128, 0, 56, 1) 100%
+  );
 }
 
 .cv-container {
   width: 70%;
-  margin-top: 3%;
-  box-shadow: 0 10px 20px 1px rgba(10, 20, 10, 0.4);
-  /* background-color: black; */
+  margin: 3% auto;
+  height: fit-content;
+  box-shadow: 0 1px 20px 1px rgba(10, 20, 10, 0.4);
 }
 
 .background-image-container {
@@ -36,10 +46,9 @@ h2 {
   /* position: relative; */
   display: flex;
   flex-direction: column;
-  color: white;
+  color: transparent;
   justify-content: center;
   align-items: center;
-  background-image: url("starry background.jpg");
   object-fit: fill;
 }
 .background-image {
@@ -61,20 +70,18 @@ h2 {
   flex-direction: column;
   padding: 20px;
   padding-top: 5%;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 26, 58, 1) 0%,
-    rgba(66, 8, 57, 1) 51%,
-    rgba(128, 0, 56, 1) 100%
-  );
+
   border: none;
 }
 
 .cv-heading {
   border-radius: 10px;
   padding: 15px;
-  background-color: rgb(9, 0, 69);
+  /* background-color: rgb(9, 0, 69); */
+  background-color: #440839;
+  z-index: 2;
   color: white;
+  width: 15%;
   margin-top: 10px;
   border: white solid 5px;
   display: flex;
@@ -82,31 +89,19 @@ h2 {
   justify-content: center;
   /* margin: 0%; */
   font-size: 2em;
-  animation: glow 1s infinite;
+  box-shadow: 0 1px 20px 2px rgba(186, 186, 186, 0.829);
 }
 .card {
   width: 85%;
   margin: 10px auto;
   padding: 1px 20px;
   display: flex;
-  background-color: #fafafa;
-  color: black;
+  justify-content: space-between;
+  /* border: white solid 5px; */
+  color: white;
   border-radius: 10px;
-  animation: glow 2s infinite;
-  transition: animation 0.5s ease-in-out;
 }
 
-@keyframes glow {
-  0% {
-    box-shadow: 0 1px 10px 2px rgba(0, 174, 237, 0.518);
-  }
-  50% {
-    box-shadow: 0 1px 10px 2px rgba(20, 0, 237, 0.518);
-  }
-  100% {
-    box-shadow: 0 1px 10px 2px rgba(0, 174, 237, 0.518);
-  }
-}
 .half {
   width: 50%;
   padding: 10px;
@@ -129,6 +124,7 @@ h2 {
   align-items: center;
   position: relative;
   flex-direction: column;
+  border-bottom: white solid 2px;
 }
 
 .profile-div {
@@ -139,4 +135,69 @@ h2 {
   color: white;
   justify-content: center;
   align-items: center;
+}
+
+.about-container {
+  background-color: #3667cd;
+  width: 53%;
+  padding: 2% 3%;
+  border-radius: 5px;
+  line-height: 150%;
+}
+
+.info-container {
+  background-color: white;
+  color: #3667cd;
+  width: 33%;
+  padding: 2% 3%;
+  line-height: 150%;
+  border-radius: 5px;
+}
+
+.progress-div {
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.progress-box {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  padding: 1px;
+  background-color: #cacaca80;
+  border: white solid 1px;
+}
+
+.filled-progress-box {
+  background-color: #31c0fe;
+  animation: glow 1s infinite;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0px 3px 2px rgba(255, 255, 255, 0.689);
+  }
+  50% {
+    box-shadow: 0 0px 3px 2px rgba(0, 174, 237, 0);
+  }
+  100% {
+    box-shadow: 0 0px 3px 2px rgba(231, 231, 231, 0.813);
+  }
+}
+
+.skill {
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #3c7aff;
+  border-radius: 25px;
+  color: aliceblue;
+  font-weight: 600;
+  /* align-items: center; */
+}
+.skill-text {
+  width: 40%;
+  font-size: 1em;
+  /* margin: 5px; */
 }
