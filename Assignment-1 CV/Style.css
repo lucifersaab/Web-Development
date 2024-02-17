@@ -99,8 +99,8 @@ hr {
   justify-content: center;
   /* margin: 0%; */
   font-size: 2em;
-  box-shadow: 0 1px 20px 4px rgba(162, 162, 162, 0.5);
-  box-shadow: 0 1px 10px 4px rgba(140, 180, 255, 0.769);
+  box-shadow: 0 -2px 10px 2px rgba(0, 68, 255, 0.527),
+    0 1px 20px 2px rgba(140, 180, 255, 0.769);
 }
 .card {
   width: 85%;
@@ -231,7 +231,7 @@ hr {
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-  box-shadow: 0 0px 5px 1px rgb(209, 243, 255);
+  box-shadow: 0 0px 7px 1px rgba(250, 250, 250, 0.523);
   z-index: 3;
   /* display: none; */
 }
@@ -241,31 +241,55 @@ hr {
   height: 50px;
   object-fit: contain;
   border-radius: 10px;
+  transition: transform 0.25s ease-in-out;
 }
 
 .projects-container {
   height: 300px;
-  overflow-y: scroll;
-  overflow-x: hidden;
   scrollbar-width: thin;
 }
 
-/* .about-container:hover {
-  transform: scale(1.5);
+.projects-container ul {
+  height: 70%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
+.about-container:hover {
+  box-shadow: 0 0px 10px 1px rgb(3, 192, 192);
+}
+
 .info-container:hover {
-  transform: scale(1.5);
-} */
+  box-shadow: 0 0px 10px 1px rgb(3, 192, 192);
+}
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 20px;
 }
 
 body::-webkit-scrollbar-track {
-  background: white;
+  background: #3c7aff;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #3c7aff;
+  background-color: white;
   border-radius: 20px;
   border: 3px solid white;
 }
+
+.socials-container img:hover {
+  box-shadow: 0 0px 10px 5px rgb(189, 255, 255);
+  transform: scale(1.2);
+}
+
+/* .projects-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+  background: #3c7aff;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  border: 3px solid white;
+} */
