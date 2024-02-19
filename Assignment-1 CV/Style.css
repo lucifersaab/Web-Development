@@ -54,7 +54,6 @@ hr {
 .background-image-container {
   width: 100%;
   height: 450px;
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   color: transparent;
@@ -72,8 +71,14 @@ hr {
   height: 150px;
   border-radius: 50%;
   border: white 5px solid;
+  box-shadow: 0 0px 20px 1px rgba(0, 0, 0, 0.712)
+
 }
 
+h1{
+  margin-bottom: 0;
+
+}
 .content-container {
   display: flex;
   justify-content: center;
@@ -87,20 +92,43 @@ hr {
 .cv-heading {
   border-radius: 10px;
   padding: 15px;
-  /* background-color: rgb(9, 0, 69); */
   background-color: #5280b8;
   z-index: 2;
   color: white;
   width: 15%;
+  height: 40px;
   margin-top: 10px;
   border: white solid 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin: 0%; */
   font-size: 2em;
-  box-shadow: 0 -2px 10px 2px rgba(0, 68, 255, 0.527),
-    0 1px 20px 2px rgba(140, 180, 255, 0.769);
+  box-shadow: 0 0px 10px 2px rgba(1, 70, 128, 0.815);
+  /* animation: popup 1s infinite; */
+}
+
+@keyframes popup {
+
+  0%{
+    font-size: 2em;
+    text-shadow: 0 0 10px rgba(0, 187, 255, 0.701);
+    /* transform: rotate(15deg); */
+  }
+
+  60%{
+    font-size: 3em;
+    text-shadow: 0 0 10px rgba(0, 255, 234, 0.701);
+
+    /* transform: rotate(-15deg); */
+
+  }
+
+  100%{
+    font-size: 2em;
+    text-shadow: 0 0 10px rgba(0, 187, 255, 0.701);
+    /* transform: rotate(15deg); */
+  }
+  
 }
 .card {
   width: 85%;
@@ -217,6 +245,12 @@ hr {
 .socials-container {
   width: fit-content;
   background-color: #3c7aff;
+  background: linear-gradient(
+    143deg,
+    rgba(0, 62, 139, 1) 0%,
+
+    rgb(82, 159, 254) 100%
+  );
   border: white solid 2px;
   border-left: none;
   border-top-right-radius: 10px;
@@ -233,6 +267,9 @@ hr {
   padding: 10px;
   box-shadow: 0 0px 7px 1px rgba(250, 250, 250, 0.523);
   z-index: 3;
+  transition: transform 0.5s ease-in-out;
+  animation: glow    rgba(0, 62, 139, 1) 50%,
+  1s infinite;
   /* display: none; */
 }
 
@@ -255,11 +292,14 @@ hr {
   overflow-x: hidden;
 }
 .about-container:hover {
-  box-shadow: 0 0px 10px 1px rgb(3, 192, 192);
+  /* background-color:#1d65ff ; */
+  box-shadow: 0 0 10px 2px white
+
 }
 
 .info-container:hover {
-  box-shadow: 0 0px 10px 1px rgb(3, 192, 192);
+  background-color:#ffffff ;
+  box-shadow: 0 0 10px 2px white
 }
 body::-webkit-scrollbar {
   width: 20px;
