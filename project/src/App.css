@@ -1,0 +1,209 @@
+html{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+body{
+  background: linear-gradient(180deg, rgba(23,0,28,1) 0%, rgba(40,0,45,1) 100%);
+}
+.main-box{
+  /* background-image: url("./LandingPage/Images/headphone.jpg"); */
+  height: 70vh;
+  width: 80%;
+  background-size: cover;         
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 0 10px 5px rgb(252, 252, 252); */
+  /* border-radius: 20px; */
+
+}
+
+
+.nav-link{
+  color: white;
+}
+
+.my-custom-toggle {
+  background-color: transparent; /* Light background */
+  color: #f8f9fa; /* Dark text for contrast */
+  border: 2px solid #f8f9fa;
+  /* box-shadow: 0 0 10px 5px rgba(23,0,28,1); */
+}
+ 
+.main-box-intro{
+  width: 75%;
+  /* background-color: aliceblue; */
+  height: 100%;
+  /* border-radius: 20px; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.main-box-aside{
+  width:25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 20px; */
+
+}
+
+
+.custom-navs:hover{
+  background-color: #42003d;
+  color: white;
+  transform: scale(1.1);
+  transition: transform 0.25s ease-in;
+}
+.floating-icon{
+  /* position: absolute; */
+  height: 7vw;
+  width: 7vw;
+  padding: 0.5vw;
+  border-radius: 0.5vw;
+  background-color: #4546476b;
+  box-shadow: 0 0 10px 5px rgba(23,0,28,1);
+}
+
+.tech-wheel{
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  float:right;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.float1{
+  animation: floatanim 3s infinite;
+
+}
+
+
+.float2{
+  animation: float2anim 3s infinite;
+}
+
+@keyframes floatanim {
+  0%{
+    transform: translateY(20px);
+    
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(20px);
+    
+  }
+  
+}
+
+
+@keyframes float2anim {
+  0%{
+    transform: translateY(-20px);
+
+  }
+  50%{
+    transform: translateY(20px);
+  }
+  100%{
+    transform: translateY(-20px);
+
+  }
+  
+}
+
+.roam1{
+  animation: roam1 60s infinite;
+  animation-timing-function: linear;
+}
+.roam2{
+  animation-timing-function: linear;
+  animation: roam2 100s infinite;
+}
+.roam3{
+  animation-timing-function: linear;
+  animation: roam3 75s infinite;
+}
+.roam4{
+  animation-timing-function: linear;
+  animation: roam4 45s infinite;
+}
+
+@keyframes roam1 {
+  0%{
+    top:10vh;
+    left:90vw
+  }
+  50%{
+    top: calc(100vh - 5vw);
+    left: 0;
+  }
+  100%{
+    top:10vh;
+    left:90vw
+  }
+  
+}
+
+@keyframes roam2 {
+  0%{
+    top:10vh;
+    left:0
+  }
+  50%{
+    top: calc(100vh - 5vw);
+    left: 90vw;
+  }
+  100%{
+    top:10vh;
+    left:0
+  }
+  
+}
+
+@keyframes roam3 {
+  0%{
+    top:10vh;
+    left:calc(50vw - 5vw)
+  }
+  25%{
+    top:50vh;
+    left:90vw
+  }
+
+  75%{
+    top: 10vh;
+    left: 10vw;
+  }
+  100%{
+    top:10vh;
+    left:calc(50vw - 5vw)
+  }
+  
+}
+
+@keyframes roam4 {
+  0%{
+    top:90vh;
+    left:0
+  }
+  50%{
+    top: 50vh;
+    left: 90vw;
+  }
+  100%{
+    top:90vh;
+    left:0
+  }
+}

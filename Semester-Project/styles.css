@@ -1,12 +1,13 @@
 html{
     width: 100%;
-    height: 100%;
-    position: fixed;
+    overflow-x: hidden;
+    height: 100vh;
+    /* position: fixed; */
 }
 .main-box{
     /* background-image: url("./headphone.jpg"); */
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-size: cover;         
     background-repeat: no-repeat;
     color: white;
@@ -30,6 +31,9 @@ html{
     /* height: 400px; */
 }
 
+.slider-buttons{
+    width: 5%;
+}
 .slider-image{
     object-fit: cover;
 }
@@ -37,12 +41,51 @@ html{
     width: 50%;
 }
 
+.card-img-top{
+    height: 250px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.neon-text {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+    font-size: 4.2rem;    
+  }
+  
+.margin-10{
+    margin-top: 10px;
+}
+  
+  
+  /* Flickering animation */
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(255, 0, 0),
+        0 0 80px rgb(255, 0, 0),
+        0 0 90px rgb(255, 0, 60),
+        0 0 100px rgb(255, 0, 106),
+        0 0 150px rgb(255, 0, 4);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
 .search-container2{
     display: none;
 }
 
 .navbar-icon-container{
-    width: 20%;
+    width: 30%;
 }
 .nav-buttons-container{
     width: 20%;
@@ -51,9 +94,12 @@ html{
 }
 
 .cart-button{
-    border: 2px solid white;
-
+    /* border: 2px solid white; */
     padding: 5px 10px;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .signin-button{
@@ -61,7 +107,209 @@ html{
     border-radius: 5px;
     padding: 5px 10px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+
+.sale-section-container{
+    background-image: url('wall.jpg');
+
+    width: 90%;
+    /* height: 200px; */
+    padding: 30px;
+    border-radius: 30px;
+    /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.733); */
+    margin:auto;
+    margin-top: 50px;
+}
+
+.deals-of-the-day{
+/* background-color: #171717; */
+    /* border: 4px solid white; */
+    /* background-image: url('wall.jpg'); */
+    height: 100px;
+    object-fit: cover;
+    /* border-radius: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    /* animation: dealsanimation 6s infinite; */
+    animation-timing-function: linear;
+}
+
+.floating-icon{
+    /* position: absolute; */
+    height: 10vw;
+    width: 10vw;
+    margin-inline: 10px;
+    padding: 0.5vw;
+    border-radius: 0.5vw;
+    background: linear-gradient(90deg, rgb(183, 0, 137) 0%, rgb(255, 116, 183) 100%);
+    background: radial-gradient(circle, rgb(183, 0, 113) 0%, rgb(235, 51, 72) 100%);
+    
+    /* box-shadow:
+    0 0 0.5px #fff,
+    0 0 1px #fff,
+    0 0 3px #fff,
+    0 0 5px #fff,
+    0 0 6px rgb(255, 0, 106),
+    0 0 8px rgb(255, 0, 106),
+    0 0 10px rgb(255, 0, 60),
+    0 0 15px rgb(255, 0, 68),
+    0 0 25px rgb(255, 0, 0); */
+
+    /* box-shadow: 0 0 10px 5px rgb(130, 130, 130); */
+  }
+  
+  .cool-animation-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+  }
+  
+  .float1{
+    animation: floatanim 3s infinite;
+  
+  }
+  
+  
+  .float2{
+    animation: float2anim 3s infinite;
+  }
+  
+  @keyframes floatanim {
+    0%{
+      transform: translateY(20px);
+      
+    }
+    50%{
+      transform: translateY(-20px);
+    }
+    100%{
+      transform: translateY(20px);
+      
+    }
+    
+  }
+  
+  
+  @keyframes float2anim {
+    0%{
+      transform: translateY(-20px);
+  
+    }
+    50%{
+      transform: translateY(20px);
+    }
+    100%{
+      transform: translateY(-20px);
+  
+    }
+    
+  }
+
+@keyframes dealsanimation {
+    0%{
+        left:0
+    }
+    50%{
+        left: 75%;
+    }
+    100%{
+        left: 0;
+    }
+    
+}
+
+
+.card{
+    /* background: linear-gradient(142deg, rgba(58,16,55,1) 0%, rgba(30,26,44,1) 100%); */
+    background-color: #171717;
+    height: 350px;
+    padding: 20px;
+    color: white;
+    font-weight: 500;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgba(137, 137, 137, 0.403);
+    overflow: hidden;
+    transition: transform 0.75s ease-in-out;
+
+}
+
+.discount-tag{
+    background-color: rgb(20, 220, 107);
+    transform: rotate(-45deg);
+    position: absolute;
+    width: 130px;
+    left: -30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 1px rgb(255, 255, 255);
+
+}
+
+
+@media screen and (max-width:1000px) {
+    .card{
+        height: 250px;
+        /* positpxion: fixed; */
+        padding: 2vw;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .card-img-top{
+        border-radius: 10px;
+    }
+    .discount-tag{
+        font-size: 0.75em;
+        width: 95px;
+    }
+     
+    .cart-button{
+        flex-direction: column;
+    }
+    .cool-animation-section{
+        height: 20vh;
+    }
+    .deals-of-the-day{
+        font-size: 2em;
+        padding: 2vw;
+        /* border: none; */
+        /* animation: none; */
+        width: 100%;
+        height: 10vh;
+
+    }
+    .sale-section-container{
+        padding: 2vw;
+        border-radius: 2vw;
+        width: 100%;
+    }
+
+    .nav-buttons-container{
+        width: 35%;
+    }
+    /* .col{
+        width: 50%;
+
+    } */
+}
+
+.card:hover{
+    transform: scale(1.1);
 }
 @media screen and (max-width:850px) {
     .search-container{
@@ -73,6 +321,19 @@ html{
     .search-container2{
         display: inline;
         width: 100%;
+    }
+    .navbar-icon-container{
+        width: 70%;
+    }
+    .card-title{
+        font-size: 1em;
+    }
+    .card-text{
+        font-size: 0.75em;
+    }
+    .card-img-top{
+        height: 20vh;
+        padding: 1vw;
     }
 }
 .logo-container{
