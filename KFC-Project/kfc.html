@@ -170,9 +170,9 @@
         </div>
         <div class="contactus-container">
           <h2>Contact us</h2>
-          <form class="contactus-inner-container">
-            <input class="contact-input" placeholder="Enter your name" type="text">
-            <input class="contact-input" placeholder="Enter your email" type="email">
+          <form class="contactus-inner-container" onsubmit="formsubmit();">
+            <input class="contact-input" id="nameInput" placeholder="Enter your name" type="text">
+            <input class="contact-input"id="emailInput" placeholder="Enter your email" type="email">
             <select class="contact-input">
               <option class="options-class" id="male">Male</option>
               <option class="options-class" id="female">Female</option>
@@ -181,6 +181,23 @@
           </form>
         </div>
     </div>
+
+    <script>
+      function formsubmit(){
+        event.preventDefault();
+        var name=$("#nameInput");
+        var email=$("#emailInput");
+        console.log(name.val());
+        if(!name.val()){
+          name.addClass("error-field");
+        }
+        if(!email.val()){
+          email.addClass("error-field");
+        }
+
+        
+      }
+    </script>
     
 </body>
 </html>
