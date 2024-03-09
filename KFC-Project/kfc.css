@@ -16,9 +16,9 @@ html{
 .brand-name{
     font-size: 2em;
     color: red !important;
-    font-style: italic;
+    /* font-style: italic; */
     font-weight: 600;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-family:fantasy ;
 }
 
 .text-bg-light{
@@ -30,6 +30,9 @@ html{
 }
 .main-nav{
      height: 70px;
+     position: sticky;
+     top: 0;
+     z-index: 3;
 }
 .search-bar{
     width: 50% !important;
@@ -471,22 +474,21 @@ body{
     margin: 0;
 }
 
+hr{
+    border-top: none
+}
+
 .contactus-heading{
     color: red;
     margin-bottom: 40px;
+    font-family: fantasy !important;
 }
 .contactus-container{
     display: flex;
     /* flex-direction: column; */
     /* justify-content: s; */
     align-items: center;
-    /* gap: 30px; */
-    padding:40px;
-    /* border: 3px solid white; */
-    /* width: 700px; */
-    width: 55%;
-    margin: 30px;
-    margin: 0 auto;
+   
     
 
 }
@@ -507,16 +509,12 @@ body{
 
 }
 
-/* .contact */
 .contact-kfc-logo{
     font-size: 30px;
     font-family: monospace;
     text-align: center;
 }
 
-/* .contact-input::placeholder{
-    color: white;
-} */
 
 .contactus-inner-container{
     display: flex;
@@ -534,10 +532,21 @@ body{
 }
 
 .contactus-button{
-    background-color: #171717;
+    background-color: red;
     color: #fff;
+    border: none;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 5px 7px;
+    transition: 0.25s ease;
+    border: 2px solid red;
+
 }
 
+.contactus-button:hover{
+    background-color: #fff;
+    color: red;
+}
 .error-field{
     border: 2px solid red;
     
@@ -676,7 +685,7 @@ body{
     top: 0;
     -webkit-transform: translate(-50%);
     transform: translate(-50%);
-    z-index: 9;
+    z-index: 2;
 }
 
 .three-red-marks{
@@ -757,3 +766,93 @@ body{
     height: 28px;
 
 }
+
+.top-deals-card{
+    background-color: #1c1816 !important;
+    border: none;
+    border-radius: 13px;
+    box-shadow: 0 2px 8px 0 rgba(99,99,99,.2);
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    padding: 15px 10px 0;
+    position: relative;
+    transition: all .3s;
+    flex: 0 0 23%;
+}
+
+.top-deals-card img{
+    width: 100%;
+    margin-top: -20px;
+    transition: transform 0.5s ease;
+}
+
+.top-deals-card img:hover{
+    transform: scale(1.2)
+}
+
+.top-deals-card-content h5{
+    text-overflow: ellipsis;
+    font-weight: 600;
+    font-size: 1em;
+    text-wrap: nowrap;
+}
+
+.top-deals-card-content h6{
+    font-weight: 700;
+}
+
+
+.top-deals-card-content button{
+    height: 40px;
+    background-color: #ea002a;
+    border-radius: 5px;
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+    color: #fff;
+    bottom: -40px;
+    left: 50%;
+    position: relative;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.top-deals-card-content button:hover{
+    background-color: white;
+    color: red;
+}
+
+.top-deals-card-content p{
+    overflow-y: scroll;
+    scrollbar-width: none;
+    text-overflow: ellipsis;
+    height: 50px;
+}
+
+footer{
+    width: 100%;
+}
+
+.footer-social-media img{
+    width: 30px;
+}
+
+.footer-social-media a{
+    text-decoration: none;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+.footer-heading{
+    color: red;
+    font-size: 2em;
+    font-family: fantasy;
+}
+
