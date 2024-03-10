@@ -549,6 +549,18 @@ hr{
 }
 .error-field{
     border: 2px solid red;
+    animation: shake 0.1s 3;
+    transition: transform 0.3s ease;
+}
+
+@keyframes shake {
+    50%{
+        transform: translateX(-1px);
+    }
+
+    100%{
+        transform: translateX(1px);
+    }
     
 }
 

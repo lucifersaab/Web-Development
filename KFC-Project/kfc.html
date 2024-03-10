@@ -431,62 +431,22 @@
           </div>
           <div class="col-md-12 col-lg-7 col-xl-7 mx-auto mb-4 contactus-container">
             <div class="white-container"><h2 class="contactus-heading">Contact us</h2>
-              <form class="contactus-inner-container" onsubmit="formsubmit();">
-                <input class="contact-input" id="nameInput"onchange="formsubmit();" placeholder="Enter your name" type="text">
-                <input class="contact-input"id="emailInput" onchange="formsubmit();" placeholder="Enter your email" type="email">
+              <form id="contact-form"class="contactus-inner-container" onsubmit="formsubmit();">
+                <input class="contact-input" id="nameInput" placeholder="Enter your name" type="text">
+                <input class="contact-input"id="emailInput"  placeholder="Enter your email" type="email">
                 <select class="contact-input">
-                  <option class="options-class" id="male" >Male</option>
-                  <option class="options-class" id="female">Female</option>
+                  <option class="options-class" selected disabled id="select-gender" value="" >Select Gender</option>
+                  <option class="options-class" id="male" value="male" >Male</option>
+                  <option class="options-class" id="female" value="female">Female</option>
                 </select>
               <input class="contactus-button" type="submit">
               </form></div>
             <div class="red-container contact-kfc-logo"> Here at your service! </div>
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <!-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-             <h6 class="text-uppercase fw-bold">Useful links</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #ff0000; height: 2px"
-                />
-            <p>
-              <a href="#!" class="text-white">Your Account</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Become an Affiliate</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Shipping Rates</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Help</a>
-            </p>
-          </div> -->
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <!-- <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-             <h6 class="text-uppercase fw-bold">Contact</h6>
-            <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #ff0000; height: 2px"
-                />
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-          </div> -->
-          <!-- Grid column -->
         </div>
-        <!-- Grid row -->
       </div>
     </section>
-    <!-- Section: Links  -->
-
-    <!-- Copyright -->
-    <div
+  <div
          class="text-center p-3"
          style="background-color: rgba(0, 0, 0, 0.2)"
          >
@@ -518,6 +478,10 @@
         }
         else{
           email.removeClass("error-field")
+        }
+        if(name.val() && email.val()){
+          alert("Query sent successfully!")
+          document.getElementById("contact-form").reset();
         }
 
         
