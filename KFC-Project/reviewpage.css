@@ -42,8 +42,10 @@
 }
 
 .empolyee-profile-container{
-    height: 100vh;
     padding: 20px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
 }
 
 .add-employee-button {
@@ -68,4 +70,44 @@
     font-weight: 500;
     font-size: 0.75em;
     border-radius: 5px;
+}
+
+#review-form-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #000000;
+    border: 2px solid red;
+    z-index: 10;
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    opacity: 1;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#createForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hide{
+    /* display: none !important; */
+    opacity: 0 !important;
+    transform: translate(100%, -100%) !important;
+}
+
+.delete-button{
+    background-color: red;
+    color: white;
+}
+
+.review-buttons-container{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
 }

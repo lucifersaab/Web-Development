@@ -18,13 +18,29 @@
                   <div class="nav-buttons-container">                   
                       <a class="navbar-brand brand-name" href="#">JFC</a>
                         <div>STAFF DETAILS</div>
-                        <button class="signin-button add-employee-button">Add Employee</button>
+                        <button id="add-review" class="signin-button add-employee-button">Add Review</button>
                   </div>
               </div>
             </div>
           </nav>
-          <section class="empolyee-profile-container dark">
+          <div id="review-form-container" class="hide">
+            <form id="createForm">
+                <h2>Enter details</h2>
+                <div class="form-group">
+                    <label for="createTitle">Name</label>
+                    <input type="text" class="form-control" id="createName" required placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="createContent">Message</label>
+                    <textarea class="form-control" id="createComment" rows="3" required placeholder="Comments"></textarea>
+                </div>
+                <button id="createBtn" type="submit" class="btn btn-primary">Create</button>
+                <button id="clearBtn" type="submit" class="btn btn-primary" style="display: none;">Clear</button>
+            </form>
+          </div>
+          <section id="reviewsList" class="empolyee-profile-container dark">
           </section>
+
     </div>
 </body>
 </html>
