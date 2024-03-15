@@ -13,7 +13,7 @@ function displayReviews(){
 
       $.each(data, function (index, review) {
         storiesList.append(
-          `<div class="mb-3">
+          `<div>
                 <h3>${review.name}</h3>
                 <div>${review.createdAt}</div>
                 <div class="review-buttons-container">
@@ -118,6 +118,9 @@ $(document).ready(function () {
   $(document).on("click", ".btn-edit", editBtnClicked);
   $(document).on("click", ".add-comment", editBtnClicked);
   $(document).on("click", "#add-review", addReview);
+  $("#form-close-button").on("click",function(){
+    $("#review-form-container").addClass("hide");
+  })
 
 
   // Create Form Submission
