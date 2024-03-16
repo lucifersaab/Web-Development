@@ -13,15 +13,15 @@ function displayReviews(){
 
       $.each(data, function (index, review) {
         storiesList.append(
-          `<div>
+          `<div class="review-container">
                 <h3>${review.name}</h3>
                 <div>${review.createdAt}</div>
+                <div><i> ${review.Comments}</i></div>
                 <div class="review-buttons-container">
                     <button class="signin-button add-employee-button btn btn-info btn-sm mr-2 btn-edit " data-id="${review.id}">Edit</button>
                     <button class="signin-button add-employee-button  btn-del delete-button" data-id="${review.id}">Delete</button>
                 </div>
             </div>
-            <hr />
             `
         );
       });
@@ -59,6 +59,8 @@ function deleteReview() {
         $("#createComment").val(data.Comments);
         $("#createBtn").html("Update");
         $("#createBtn").attr("data-id", data.id);
+        $("#review-form-container").removeClass("hide");
+
       },
       error: function (error) {
         console.error("Error deleting story:", error);
@@ -79,6 +81,8 @@ function deleteReview() {
         data: { name, Comments },
         success: function () {
           displayReviews(); // Refresh the list after creating a new story
+          document.getElementById("createForm").reset();
+          $("#review-form-container").addClass("hide");
         },
         error: function (error) {
           console.error("Error creating story:", error);
@@ -90,7 +94,9 @@ function deleteReview() {
         method: "POST",
         data: { name, Comments },
         success: function () {
-          displayReviews(); // Refresh the list after creating a new story
+          displayReviews(); 
+          $("#review-form-container").addClass("hide");
+
         },
         error: function (error) {
           console.error("Error creating story:", error);
@@ -119,7 +125,7 @@ $(document).ready(function () {
   $(document).on("click", ".add-comment", editBtnClicked);
   $(document).on("click", "#add-review", addReview);
   $("#form-close-button").on("click",function(){
-    $("#review-form-container").addClass("hide");
+  $("#review-form-container").addClass("hide");
   })
 
 
