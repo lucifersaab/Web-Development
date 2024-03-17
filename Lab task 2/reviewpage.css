@@ -1,0 +1,155 @@
+.main-nav{
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    border-bottom: 2px solid red;
+}
+
+
+.dark{
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.light{
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.nav-kfc{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-buttons-container{
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 10px; */
+}
+
+.brand-name{
+    font-size: 2em;
+    color: red !important;
+    /* font-style: italic; */
+    font-weight: 600;
+    font-family:fantasy ;
+}
+
+.empolyee-profile-container{
+    padding: 20px;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+}
+
+.add-employee-button {
+    background-color: red;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.75em;
+    /* border-color: #fff; */
+    width: 110px;
+    transition: all 0.3s ease;
+}
+.signin-button{
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 150px; */
+    padding: 15px 6px;    ;
+    height: 15px;
+    font-weight: 500;
+    font-size: 0.75em;
+    border-radius: 5px;
+}
+
+#review-form-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #000000;
+    border: 2px solid red;
+    z-index: 10;
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    opacity: 1;
+    display: block;
+    transition: all 0.6s ease;
+}
+
+#createForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hide{
+    /* display: none !important; */
+    opacity: 0 !important;
+    top:0 !important;
+    /* left: 0 !important; */
+    /* transform: translate(0,0) !important; */
+}
+
+.delete-button{
+    background-color: red !important;
+    color: white !important;
+}
+
+.delete-button:hover{
+    background-color: white !important;
+    color: red !important;
+}
+
+.review-buttons-container{
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    padding-left: 0;
+}
+
+#form-close-button{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: red;
+    background-color: transparent;
+    border: none;
+}
+
+hr{
+    margin: 0 !important;
+}
+
+
+.review-container{
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow:0 0 10px 1px rgba(255, 0, 0, 0.634);
+    padding: 10px 20px;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.add-employee-button:hover{
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
