@@ -6,110 +6,154 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/6ede132488.js" crossorigin="anonymous"></script>    <link rel="stylesheet" href="main.css">
     <link rel="icon" href="/media/jfc-logo.png">
     <title>Document</title>
 </head>
 <body>
 
-    <div class="main-div white-bg">
-        <div class="container">
-            <div class="header-wrap-top">
-                <div class="header-left"> 
-                    <div class="main_nav">
-                        <nav class="header-btm-nav nested-menu"> 
-                            <ul class="top-list">
-                                <li >ABC
-                                </li>
-                                <li class="top-list-down"> DEF
-                                </li>							  
-                            </ul>
-                        </nav>
+
+    <!-- NAVBAR -->
+    <div class="sticky">
+        <div class="main-div white-bg">
+            <div class="container">
+                <div class="header-wrap-top">
+                    <div class="header-left"> 
+                        <div class="main_nav">
+                            <nav class="header-btm-nav nested-menu"> 
+                                <ul class="top-list">
+                                    <li >ABC
+                                    </li>
+                                    <li class="top-list-down"> DEF
+                                    </li>							  
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                </div>
-                <div class="header-middle">
-                    <a href=""><img src="./assets/logo.png" alt="logo" /></a>
-                </div>
-                <div class="header-right">
-                    <div class="main_nav">
-                        <div class="header-btm-nav header-action-row">
-                            <div class="searchSec">
-                                <form>
-                                    <label for="headerSearch"></label>
-                                    <input type="text" class="searchInput" placeholder="Search" name="headerSearch" id="headerSearch" maxlength="30">
-                                    <button type="button" name="headSrchSubmit" id="headSrchSubmit" aria-label="Product Search"><i class="fi-rs-search"></i></button> 
-                                </form> 
-                            </div>
-                            <div class="header-action-icon">
-                                <a class="mini-cart-icon" id="mini-wishlist" aria-label="wishlist page"><i class="fi fi-rs-heart"></i></a>							
-                            </div>
-                            <div class="header-action-icon">
-                                <a class="mini-cart-icon" id="mini-cart" aria-label="cart page"><i class="fi fi-rs-shopping-bag"></i>
-                                </a>
-                            </div>
-                            <div class="header-action-icon header-action-icon-end">
-                                    <a aria-label="user account page" href=""><i class="fi-rs-user"></i></a>                                 
-                                    <a href=" "><i class="fi-rs-user"></i></a> 
-                                    <div class="cart-dropdown-wrap  account-dropdown">
-                                        <ul>
-                                            <li> <a href=""><i class="fi fi-rs-user mr-10"></i>Account</a> </li>
-                                            <li> <a href=""><i class="fi fi-rs-id-badge mr-10"></i>Profile</a> </li>
-                                            <li> <a href=""><i class="fi fi-rs-shopping-bag mr-10"></i>Orders</a> </li>
-                                            <li> <a href=""><i class="fi fi-rs-following mr-10"></i>Wishlist</a> </li>
-                                            <li> <a href="" onclick="event.preventDefault();
-                                                            document.getElementById('head-logout-form').submit();" ><i class="fi fi-rs-sign-out mr-10"></i>{{ __('Logout') }}</a> 
-                                            </li>
-                                            <form id="head-logout-form" class="d-none"></form>                                      
-                                        </ul>
-                                    </div>
+                    <div class="header-middle">
+                        <a href=""><img src="./assets/logo.png" alt="logo" /></a>
+                    </div>
+                    <div class="header-right">
+                        <div class="main_nav">
+                            <div class="header-btm-nav header-action-row">
+                                <div class="searchSec">
+                                    <form>
+                                        <label for="headerSearch"></label>
+                                        <input type="text" class="searchInput" placeholder="Search" name="headerSearch" id="headerSearch" maxlength="30">
+                                        <button type="button" name="headSrchSubmit" id="headSrchSubmit" aria-label="Product Search"><i class="fa-solid fa-search"></i></button> 
+                                    </form> 
+                                </div>
+                                <div class="header-action-icon">
+                                    <a id="mini-wishlist" aria-label="wishlist page"><i class="fa-regular fa-heart"></i></a>							
+                                </div>
+                                <div class="header-action-icon">
+                                    <a class="mini-cart-icon" id="mini-cart" aria-label="cart page"><i class="fa-regular fa-shopping-bag"></i>
+                                    </a>
+                                </div>
+                                <div class="header-action-icon header-action-icon-end dropdown">
+                                        <!-- <a aria-label="user account page" href=""><i class="fi-rs-user"></i></a>                                  -->
+                                        <a href=" " class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user"></i></a> 
+                                        <div class="cart-dropdown-wrap  account-dropdown dropdown-menu">
+                                            <ul>
+                                                <li> <a href=""><i class="fi fi-rs-user mr-10"></i>Account</a> </li>
+                                                <li> <a href=""><i class="fi fi-rs-id-badge mr-10"></i>Profile</a> </li>
+                                                <li> <a href=""><i class="fi fi-rs-shopping-bag mr-10"></i>Orders</a> </li>
+                                                <li> <a href=""><i class="fi fi-rs-following mr-10"></i>Wishlist</a> </li>
+                                                <li> <a href="" ><i class="fi fi-rs-sign-out mr-10"></i>Logout</a> </li>
+                                                <form id="head-logout-form" class="d-none"></form>                                      
+                                            </ul>
+                                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="header-wrap-top mob-sec">
-                <div class="header-left">
-                    <a href="">
-                        <img class="m-screen" src="" alt="logo" />
-                        <img class="s-screen" src="" alt="logo" />
-                    </a>
-                </div> 
-                <div class="header-right">
-                    <div class="searchSec">
-                        <form>
-                            <span class="file" id="mobHeaderImageSearch"><i class="fi-rs-camera"></i><input type="file" name="file" aria-labelledby="mobHeaderImageSearch"/></span>
-                            <input type="text" class="searchInput" placeholder="Search" name="mobHeaderSearch" id="mobHeaderSearch" maxlength="30">
-                            <button type="submit" name="mobHeadSrchSubmit" id="mobHeadSrchSubmit" aria-label="Product Search"><i class="fi-rs-search"></i></button> 
-                        </form> 
+                <div class="header-wrap-top mob-sec">
+                    <div class="header-left">
+                        <a href="">
+                            <img class="m-screen" src="" alt="logo" />
+                            <img class="s-screen" src="" alt="logo" />
+                        </a>
+                    </div> 
+                    <div class="header-right">
+                        <div class="searchSec">
+                            <form>
+                                <span class="file" id="mobHeaderImageSearch"><i class="fi-rs-camera"></i><input type="file" name="file" aria-labelledby="mobHeaderImageSearch"/></span>
+                                <input type="text" class="searchInput" placeholder="Search" name="mobHeaderSearch" id="mobHeaderSearch" maxlength="30">
+                                <button type="submit" name="mobHeadSrchSubmit" id="mobHeadSrchSubmit" aria-label="Product Search"><i class="fi-rs-search"></i></button> 
+                            </form> 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="search-mega-row">
-                <button class="btn" name="closeSearch" id="closeSearch"><i class="fi-rs-cross"></i></button>
-                <div class="searchMega-top">
-                    <h5>Popular searches</h5>
-                    <div class="popularLinks-row" id="popularLinks">					
+                <div class="search-mega-row">
+                    <button class="btn" name="closeSearch" id="closeSearch"><i class="fi-rs-cross"></i></button>
+                    <div class="searchMega-top">
+                        <h5>Popular searches</h5>
+                        <div class="popularLinks-row" id="popularLinks">					
+                        </div>
                     </div>
-                </div>
-                <div class="searchMega-btm">
-                    <div class="searchMega-left-inner">
-                        <h5>Recommended Collections</h5> 
-                        <div class="product-thumbnail-row row" id="searchMegaDiv">						
-                        </div> 
+                    <div class="searchMega-btm">
+                        <div class="searchMega-left-inner">
+                            <h5>Recommended Collections</h5> 
+                            <div class="product-thumbnail-row row" id="searchMegaDiv">						
+                            </div> 
+                        </div>
                     </div>
-                </div>
-                <div class="loadMore-thumbnail" id="searchLoadMore">	
-                    HAYYYY			
+                    <div class="loadMore-thumbnail" id="searchLoadMore">	
+                        HAYYYY			
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="header-wrap-bottom">
-                 <div class="main_nav sticky-curvy-subnav">
-                      <nav class="header-btm-nav nested-menu"> 
-                        <ul class="top-list-btm">
-                                <li><a href="">ABC</a>
+        <div class="header-wrap-bottom">
+                     <div class="main_nav sticky-curvy-subnav">
+                          <nav class="header-btm-nav nested-menu"> 
+                            <ul class="top-list-btm">
+                                <li><a href="">Rings</a>
+                                    <ul class="btm-list">
+                                        <li>
+                                            <div class="mega-row">
+                                                <div class="mega-empty-space"></div>
+                                                <div class="mega-row-left">
+                                                            <div class="megaRow-box-list">
+                                                                <ul>
+                                                                    <li>DEF</li>
+                                                                        <li><a href="">S</a></li>
+                                                                </ul>
+                                                            </div>											
+                                                </div>
+                                                <div class="mega-row-right">
+                                                    <div class="megaRow-box-ad">
+                                                        <img src="" alt="" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>	
+                                <li><a href="">Earrings</a>
+                                    <ul class="btm-list">
+                                        <li>
+                                            <div class="mega-row">
+                                                <div class="mega-empty-space"></div>
+                                                <div class="mega-row-left">
+                                                            <div class="megaRow-box-list">
+                                                                <ul>
+                                                                    <li>DEF</li>
+                                                                        <li><a href="">S</a></li>
+                                                                </ul>
+                                                            </div>											
+                                                </div>
+                                                <div class="mega-row-right">
+                                                    <div class="megaRow-box-ad">
+                                                        <img src="" alt="" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>	
+                                <li><a href="">Bracelets</a>
                                     <ul class="btm-list">
                                         <li>
                                             <div class="mega-row">
@@ -131,10 +175,360 @@
                                         </li>
                                     </ul>
                                 </li>							
-                        </ul>
-                      </nav>
-                 </div>
-            </div>
+                            </ul>
+                          </nav>
+                     </div>
+        </div>
+    </div>
+            <!-- NAVBAR-END -->
+
+            <!-- FIRST-CAROUSEL -->
+
+<!-- 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+
+<div class="common-margin" id="home_wpr">
+	<main class="main">
+
+        <section class="home-slider laptop-view">
+			<div class="row home-slider-row">
+ 			<div id="home-slider-sec" class="home-slider carousel slide carousel-fade height-600" data-bs-ride="carousel">
+             					
+                             <div class="carousel-indicators">
+                                <button type="button" name="bannerLeftIndic" aria-label="Banner Left" data-bs-target="#home-slider-sec" data-bs-slide-to="0" class="{{$slide1Class}}"></button>
+                            </div>
+					
+                             <div class="carousel-inner height-600">
+                                
+									<div class="carousel-item active height-600">
+										<div class="carousel-item-row height-600">
+											<div class="container home-page-container height-600">
+												<div class="sub-container height-600">
+													<div class="carousel-item-row-left carousel-content">
+													<div class="heading1">
+													From us to you<br> Forever!
+													</div>
+													<p>Discover the brilliance you deserve at unbeatable prices! Don't miss out on our exclusive collection</p>
+													<button class="discover-button">Discover 											
+													<img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover ">
+
+													</button>
+													</div>
+													<div class="carousel-item-row-left height-600">
+														<img class="blend-image height-600" src="./assets/home-earrings.png" alt="Image">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+                               
+                            </div>
+                        
+					</div>
+				</div> 
+		</section>
+
+		<!-- FOR PHONE -->
+		<!-- <section class="phone-home-slider">
+			<div class="row home-slider-row">
+ 			<div id="home-slider-sec" class="home-slider carousel slide carousel-fade" data-bs-ride="carousel">
+                       
+						
+					
+                             <div class="carousel-inner">
+                              
+									<div class="carousel-item">
+										<div class="carousel-item-row">
+											<div class="container home-page-container">
+												<div class="sub-container">
+													<div class="carousel-content">
+														<h1 class="heading1">From us to you <br>
+														Forever!</h1>
+														<p>Discover the brilliance you deserve at unbeatable prices! Don't miss out on our exclusive collection</p>
+													<button class="discover-button">Discover 											
+													<img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+
+													</button>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>                        
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-item-row">
+                                        <div class="carousel-item-row-left"> <img src="" alt="Default Banner">
+                                        </div>
+                                        <div class="carousel-item-row-right">
+                                            <div class="slider-content">
+                                                <h2>Made for you</h2>
+                                                <h1>Adorn<br> your<br> Dreams</h1>
+                                                <a href="" class="button-style-2">Shop</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+				</div> 
+		</section> -->
+		
+		<!--End Banner-->
+		<!-- Top Categories -->
+		<section id="categotySec" class="commonPadding">
+			<div class="container wow animate__animated animate__fadeIn">
+				<div class="row mob-sec">
+					<div class="headingRow">
+						<h2>PRODUCT</h2>
+						<h5>PRODUCT SUBHEADING</h5>
+					</div>
+				</div>
+				<div class="row categotySec_row">
+					<div class="categotySec_row_left">
+						<div class="headingRow desk-sec">
+							<h2>PRODUCT</h2>
+							<h5>PRODUCT SUBHEADING</h5>
+						</div>
+						<div class="sliderSec">
+							<div class="carausel-3-columns-cover"> 
+								<div class="carausel-3-columns carausel-arrow-center" id="categorySec">
+										<div class="product-cart-wrap"> 
+											<a href="">
+												<h2 class="font-16 margin-0">ABC</h2>
+												<div class="ima-box">
+													<img src="./assets/home-earrings.png" alt="jewelry" /> 
+												</div> 
+												<div class="content-box">
+												<span class="discover-button button-style-2 btn-color-2"> SHOP NOW													
+													<img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+												</span>
+												</div>
+											</a>  
+										</div>
+									<!--End product Wrap-->									
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="slider-arrow slider-arrow-2 slick-button-container" id="categorySec-arrows"></div>
+				</div> 
+			</div>
+		</section>
+
+		<section id="gift_offersSec" class="commonPadding">
+			<div class="container wow animate__animated animate__fadeIn">
+				<div class="row gfSec_row">
+					<div class="luxury-sub-container">
+						<div class="carousel-item-row-left carousel-content">
+
+							<h2 class="font-30">
+							Where Luxury Meets <br> Unbeatable Value!
+							</h2>
+							<p>
+							Explore our curated selection of dazzling discounts and  elevate your style without breaking the bank.
+							</p>
+							<a class="discover-button" href="{{$salesUrl}}" >Discover <img class="contain-image" src="./assets/home-earrings.png" alt="Discover Button">
+</a>
+						</div>
+
+						<div class="carousel-item-row-left">
+							<img class="blend-image" src="./assets/home-earrings.png" alt="Image">
+						</div>
+                    </div>
+                    <!-- <div class="carousel-item-row-right">      
+                	</div> -->
+				</div>
+		</section>
+
+	<section id="gift_offersSec" class="commonPadding">
+		<div class="container">
+		  <!-- <h2>Carousel Example</h2>   -->
+		  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+			
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner carousel-inner2">
+					<div class="item active">
+						<div class="carousel-item-row">
+							<div class="luxury-sub-container">
+								<div class="carousel-item-row-left">
+									<img class="blend-image gift-card-image" src="./assets/home-earrings.png" alt="Image">
+								</div>
+								<div class="phone-view margin-t-20">
+									<img class="blend-image gift-card-image" src="./assets/home-earrings.png" alt="Image">
+								</div>
+								<div class="carousel-item-row-left carousel-content">
+									<h2 class="font-30">Buy Our Exclusive <br> Gift Cards</h2>
+									<p>Elevate every occasion with the freedom to indulge in exactly what they desire. Give the gift of limitless happiness today!</p>
+									<a class="discover-button" href="">Shop now <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+					<div class="item">
+						<div class="carousel-item-row">
+							<div class="luxury-sub-container">
+								<div class="carousel-item-row-left">
+									<img class="blend-image gift-card-image" src="./assets/home-earrings.png alt="Image">
+								</div>
+								<div class="phone-view margin-t-20">
+									<img class="blend-image gift-card-image" src="./assets/home-earrings.png" alt="Image">
+								</div>
+								<div class="carousel-item-row-left carousel-content">
+									<h2 class="font-30">Discover Perfect Gifts <br> Today!</h2>
+									<p>Explore our curated collection of captivating gift ideas, sure to delight, inspire and discover the ideal gift for every occasion.</p>
+									<a class="discover-button " href="">Shop now <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="item">
+						<div class="carousel-item-row">
+							<div class="luxury-sub-container">
+								<div class="carousel-item-row-left">
+									<img class="blend-image gift-card-image" src="./assets/DiscoverButton.png" alt="Image">
+								</div>
+								<div class="phone-view margin-t-20">
+								<img class="blend-image gift-card-image" src="./assets/DiscoverButton.png" alt="Image">
+								</div>
+								<div class="carousel-item-row-left carousel-content">
+									<h2 class="font-30">Avail Your Discount  <br>Today!</h2>
+									<p>Experience the allure of luxury at a fraction of the cost with our special discount offer. Don't miss out – claim yours now!</p>
+									<a class="discover-button" href="">Shop now <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<!-- Left and right controls -->
+				<!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+				</a> -->
+				<a class="right carousel-control carousel-next-button-container" href="#myCarousel" data-slide="next">
+				<span class="glyphicon slider-btn slider-next slick-arrow carousel-next-button" style=""><i class="fi-rs-arrow-small-right"></i></span>
+				<!-- <span class="glyphicon glyphicon-chevron-right"></span> -->
+				<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+		<!-- End Gift and offers -->
+		<!-- Recommended Section -->
+		@if(count($meterialDetails) > 2)
+			<section id="recomendedSection" class="commonPadding">
+				<div class="container wow animate__animated animate__fadeIn">
+					<div class="row mob-sec">
+						<div class="headingRow">
+							<h2>{{ucwords($collectionSliderText)}}</h2>
+							<h5>{{$collectionSliderSubText}}</h5>
+						</div>
+					</div>
+					<div class="row categotySec_row">
+				    	<div class="categotySec_row_left">
+
+							<div class="headingRow  desk-sec">
+								<h2>{{$materialSliderText}}</h2>
+								<h5>{{$materialSliderSubText}}</h5>
+							</div>
+							<div class="sliderSec">
+								<div class="carausel-3-columns-cover"> 
+									<div class="carausel-3-columns carausel-arrow-center" id="recommendedSec">
+										
+											<div class="product-cart-wrap"> 
+												<a href="{{url('jewellery/stones/'.$mtrlVal['slug_jwl'].'?stns='.$hashids->encode($mtrlVal['id']).'')}}">
+													<h2 class="font-16 margin-0">{{mb_strimwidth($mtrlVal['name_jwl'], 0, 20, "...")}}</h2>
+													<div class="ima-box">
+														<img src="{{$mtrlImg}}" alt="{{$mtrlVal['name_jwl']}} jewelry" loading="lazy"/> 
+													</div> 
+													<div class="content-box"> 
+													<span class=" discover-button button-style-2 btn-color-2 ">VIEW ALL								
+														<img class="contain-image" src="{{ Storage::url('icons/DiscoverButton.png') }}" alt="Discover Button">
+													</span><!--</span>-->	
+													</div>
+												</a>  
+											</div>
+										@endforeach
+									</div>
+								</div>
+                                
+							</div>
+                        </div>
+                        <div class="slider-arrow slider-arrow-2 carausel-3-columns-arrow laptop-view" id="recommendedSec-arrows"></div>
+					</div> 
+				</div>
+			</section>
+		@endif
+		<!-- End Recommended Section -->
+	</main>
+</div>
+
+
+<script src="{{ asset('front/js/slick.js') }}"></script>
+<script src="{{ asset('front/js/wow.js') }}"></script>
+<script src="{{ asset('front/js/main.js') }}"></script>
+
+<!-- <script type="text/javascript">
+	const blurredImageDiv = document.querySelector(".blurred-img")
+	const img = blurredImageDiv.querySelector("img")
+	function loaded() {
+		blurredImageDiv.classList.add("loaded")
+	}
+
+	if (img.complete) {
+		loaded()
+	} else {
+		img.addEventListener("load", loaded)
+	} 
+
+
+	
+</script> -->
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    // Select all buttons
+    var buttons = document.querySelectorAll('.discover-button');
     
+    // Iterate over each button
+    buttons.forEach(function(button) {
+        var image = button.querySelector('img'); // Assuming each button has only one image
+        
+        // Store the original and hover image sources
+        var originalSrc = image.src;
+        var hoverSrc = './assets/DiscoverButtonWhite.png'; // Your hover image path
+        
+        // Attach hover event listeners to change the image source
+        button.addEventListener('mouseover', function() {
+            image.src = hoverSrc;
+        });
+        
+        button.addEventListener('mouseout', function() {
+            image.src = originalSrc;
+        });
+    });
+});
+
+</script>
+@endsection
+
+
+
 </body>
 </html>
