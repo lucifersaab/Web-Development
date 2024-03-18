@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6ede132488.js" crossorigin="anonymous"></script>    
+    <script src="./js/slick.js" ></script>
+    <script src="./js/main.js" ></script>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="/media/jfc-logo.png">
+    <title>Jewellaria</title>
+</head>
+<body>
+
+
+    <!-- NAVBAR -->
+    <div class="sticky">
+        <div class="main-div white-bg">
+            <div class="container">
+                <div class="header-wrap-top">
+                    <div class="header-left"> 
+                        
+                    </div>
+                    <div class="header-middle">
+                        <a href=""><img src="./assets/logo.png" alt="logo" /></a>
+                    </div>
+                    <div class="header-right">
+                        <div class="main_nav">
+                            <div class="header-btm-nav header-action-row">
+                                <div class="searchSec">
+                                    <form>
+                                        <label for="headerSearch"></label>
+                                        <input type="text" class="searchInput" placeholder="Search" name="headerSearch" id="headerSearch" maxlength="30">
+                                        <button type="button" name="headSrchSubmit" id="headSrchSubmit" aria-label="Product Search"><i class="fa-solid fa-search"></i></button> 
+                                    </form> 
+                                </div>
+                                <div class="header-action-icon">
+                                    <a id="mini-wishlist" aria-label="wishlist page"><i class="fa-regular fa-heart"></i></a>							
+                                </div>
+                                <div class="header-action-icon">
+                                    <a class="mini-cart-icon" id="mini-cart" aria-label="cart page"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+
+                                    </a>
+                                </div>
+                                <div class="header-action-icon header-action-icon-end dropdown">
+                                        <!-- <a aria-label="user account page" href=""><i class="fi-rs-user"></i></a>                                  -->
+                                        <a href=" " class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user"></i></a> 
+                                        <div class="cart-dropdown-wrap  account-dropdown dropdown-menu">
+                                            <ul>
+                                                <li> <a href=""><i class="fi fi-rs-user mr-10"></i>Account</a> </li>
+                                                <li> <a href=""><i class="fi fi-rs-id-badge mr-10"></i>Profile</a> </li>
+                                                <li> <a href=""><i class="fi fi-rs-shopping-bag mr-10"></i>Orders</a> </li>
+                                                <li> <a href=""><i class="fi fi-rs-following mr-10"></i>Wishlist</a> </li>
+                                                <li> <a href="" ><i class="fi fi-rs-sign-out mr-10"></i>Logout</a> </li>
+                                                <form id="head-logout-form" class="d-none"></form>                                      
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-wrap-top mob-sec">
+                    <div class="header-left">
+                        <a href="">
+                            <img class="m-screen" src="" alt="logo" />
+                            <img class="s-screen" src="" alt="logo" />
+                        </a>
+                    </div> 
+                    <div class="header-right">
+                        <div class="searchSec">
+                            <form>
+                                <span class="file" id="mobHeaderImageSearch"><i class="fi-rs-camera"></i><input type="file" name="file" aria-labelledby="mobHeaderImageSearch"/></span>
+                                <input type="text" class="searchInput" placeholder="Search" name="mobHeaderSearch" id="mobHeaderSearch" maxlength="30">
+                                <button type="submit" name="mobHeadSrchSubmit" id="mobHeadSrchSubmit" aria-label="Product Search"><i class="fi-rs-search"></i></button> 
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="search-mega-row">
+                    <button class="btn" name="closeSearch" id="closeSearch"><i class="fi-rs-cross"></i></button>
+                    <div class="searchMega-top">
+                        <h5>Popular searches</h5>
+                        <div class="popularLinks-row" id="popularLinks">					
+                        </div>
+                    </div>
+                    <div class="searchMega-btm">
+                        <div class="searchMega-left-inner">
+                            <h5>Recommended Collections</h5> 
+                            <div class="product-thumbnail-row row" id="searchMegaDiv">						
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="loadMore-thumbnail" id="searchLoadMore">	
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="header-wrap-bottom">
+                     <div class="main_nav sticky-curvy-subnav">
+                          <nav class="header-btm-nav nested-menu"> 
+                            <ul class="top-list-btm">
+                                <li><a href="">Rings</a>
+                                    <ul class="btm-list">
+                                        <li>
+                                            <div class="mega-row">
+                                                <div class="mega-empty-space"></div>
+                                                <div class="mega-row-left">
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Ring</li>
+                                                                <li><a href="">Diamond Ring</a></li>
+                                                                <li><a href="">Black Diamond Ring</a></li>
+                                                                <li><a href="">Lab Grown Diamond</a></li>
+                                                        </ul>
+                                                    </div>	
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Ring</li>
+                                                                <li><a href="">Diamond Ring</a></li>
+                                                                <li><a href="">Black Diamond Ring</a></li>
+                                                                <li><a href="">Lab Grown Diamond</a></li>
+                                                        </ul>
+                                                    </div>	
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Ring</li>
+                                                                <li><a href="">Diamond Ring</a></li>
+                                                                <li><a href="">Black Diamond Ring</a></li>
+                                                                <li><a href="">Lab Grown Diamond</a></li>
+                                                        </ul>
+                                                    </div>											
+                                                </div>
+                                                
+                                                <div class="mega-row-right">
+                                                    <div class="megaRow-box-ad">
+                                                        <img src="./assets/home-ring.png" alt="" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>	
+                                <li><a href="">Earrings</a>
+                                    <ul class="btm-list">
+                                        <li>
+                                            <div class="mega-row">
+                                                <div class="mega-empty-space"></div>
+                                                <div class="mega-row-left">
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Earring</li>
+                                                                <li><a href="">Diamond Earring</a></li>
+                                                                <li><a href="">Black Diamond Earring</a></li>
+                                                                <li><a href="">Lab Grown Earring</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Earring</li>
+                                                                <li><a href="">Diamond Earring</a></li>
+                                                                <li><a href="">Black Diamond Earring</a></li>
+                                                                <li><a href="">Lab Grown Earring</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Earring</li>
+                                                                <li><a href="">Diamond Earring</a></li>
+                                                                <li><a href="">Black Diamond Earring</a></li>
+                                                                <li><a href="">Lab Grown Earring</a></li>
+                                                        </ul>
+                                                    </div>												
+                                                </div>
+                                                <div class="mega-row-right">
+                                                    <div class="megaRow-box-ad">
+                                                        <img src="./assets/home-earring.png" alt="" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>	
+                                <li><a href="">Bracelets</a>
+                                    <ul class="btm-list">
+                                        <li>
+                                            <div class="mega-row">
+                                                <div class="mega-empty-space"></div>
+                                                <div class="mega-row-left">
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Bracelets</li>
+                                                                <li><a href="">Diamond Bracelets</a></li>
+                                                                <li><a href="">Black Diamond Bracelets</a></li>
+                                                                <li><a href="">Lab Grown Bracelets</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Bracelets</li>
+                                                                <li><a href="">Diamond Bracelets</a></li>
+                                                                <li><a href="">Black Diamond Bracelets</a></li>
+                                                                <li><a href="">Lab Grown Bracelets</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Bracelets</li>
+                                                                <li><a href="">Diamond Bracelets</a></li>
+                                                                <li><a href="">Black Diamond Bracelets</a></li>
+                                                                <li><a href="">Lab Grown Bracelets</a></li>
+                                                        </ul>
+                                                    </div>											
+                                                </div>
+                                                <div class="mega-row-right">
+                                                    <div class="megaRow-box-ad">
+                                                        <img src="./assets/home-bracelet.png" alt="" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>							
+                            </ul>
+                          </nav>
+                     </div>
+        </div>
+    </div>
+            <!-- NAVBAR-END -->
+
+            <!-- FIRST-CAROUSEL -->
+
+<div class="common-margin" id="home_wpr">
+	<main class="main">
+
+        <section class="home-slider laptop-view">
+			<div class="row home-slider-row">
+ 			<div id="home-slider-sec" class="home-slider carousel slide carousel-fade height-600" data-bs-ride="carousel">
+             					
+                             <div class="carousel-indicators">
+                                <button type="button" name="bannerLeftIndic" aria-label="Banner Left" data-bs-target="#home-slider-sec" data-bs-slide-to="0" class="{{$slide1Class}}"></button>
+                            </div>
+					
+                             <div class="carousel-inner height-600">
+                                
+									<div class="carousel-item active height-600">
+										<div class="carousel-item-row height-600">
+											<div class="container home-page-container height-600">
+												<div class="sub-container height-600">
+													<div class="carousel-item-row-left carousel-content">
+													<div class="heading1 font-70">
+													From us to you<br> <span class="brown"> Forever!</span>
+													</div>
+													<p class="font-30 width-90">Discover the brilliance you deserve at unbeatable prices! Don't miss out on our exclusive collection</p>
+													<button class="discover-button">Discover 											
+													<img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover ">
+
+													</button>
+													</div>
+													<div class="carousel-item-row-left height-600">
+														<img class="blend-image height-600" src="./assets/home-earrings.png" alt="Image">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+                               
+                            </div>
+                        
+					</div>
+				</div> 
+		</section>
+
+		<!-- FOR PHONE -->
+		<!-- <section class="phone-home-slider">
+			<div class="row home-slider-row">
+ 			<div id="home-slider-sec" class="home-slider carousel slide carousel-fade" data-bs-ride="carousel">
+                       
+						
+					
+                             <div class="carousel-inner">
+                              
+									<div class="carousel-item">
+										<div class="carousel-item-row">
+											<div class="container home-page-container">
+												<div class="sub-container">
+													<div class="carousel-content">
+														<h1 class="heading1">From us to you <br>
+														Forever!</h1>
+														<p>Discover the brilliance you deserve at unbeatable prices! Don't miss out on our exclusive collection</p>
+													<button class="discover-button">Discover 											
+													<img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+
+													</button>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>                        
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-item-row">
+                                        <div class="carousel-item-row-left"> <img src="" alt="Default Banner">
+                                        </div>
+                                        <div class="carousel-item-row-right">
+                                            <div class="slider-content">
+                                                <h2>Made for you</h2>
+                                                <h1>Adorn<br> your<br> Dreams</h1>
+                                                <a href="" class="button-style-2">Shop</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+				</div> 
+		</section> -->
+		
+		<!--End Banner-->
+		<!-- Top Categories -->
+		<section id="categotySec" class="commonPadding">
+			<div class="container wow animate__animated animate__fadeIn">
+				<div class="row mob-sec">
+					<div class="headingRow">
+						<h2>Explore Our Collections</h2>
+							<h5>The best in town!</h5>
+					</div>
+				</div>
+				<div class="row categotySec_row">
+					<div class="categotySec_row_left">
+						<div class="headingRow desk-sec">
+							<h2 class="font-30 section-main-heading">Explore Our Collections</h2>
+							<h5 class="font-16 section-main-subheading">The best in town!</h5>
+						</div>
+						<div class="sliderSec">
+							<div class="carausel-3-columns-cover"> 
+								<div class="carausel-3-columns carausel-arrow-center" id="categorySec">
+										<div class="slick-list draggable">
+                                            <div class="slick-track">
+                                                <div class="product-cart-wrap"> 
+                                                    <a href="">
+                                                        <!-- <h2 class="font-16 margin-0">ABC</h2> -->
+                                                        <div class="ima-box">
+                                                            <img src="./assets/home-ring.png" alt="jewelry" /> 
+                                                        </div> 
+                                                        <div class="content-box">
+                                                        <span class="discover-button button-style-2 btn-color-2"> RINGS												
+                                                            <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+                                                        </span>
+                                                        </div>
+                                                    </a>  
+                                                </div><div class="product-cart-wrap"> 
+                                                    <a href="">
+                                                        <!-- <h2 class="font-16 margin-0">ABC</h2> -->
+                                                        <div class="ima-box">
+                                                            <img src="./assets/home-earring.png" alt="jewelry" /> 
+                                                        </div> 
+                                                        <div class="content-box">
+                                                        <span class="discover-button button-style-2 btn-color-2"> EARRINGS													
+                                                            <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+                                                        </span>
+                                                        </div>
+                                                    </a>  
+                                                </div>
+                                                <div class="product-cart-wrap"> 
+                                                    <a href="">
+                                                        <!-- <h2 class="font-16 margin-0">ABC</h2> -->
+                                                        <div class="ima-box">
+                                                            <img src="./assets/home-bracelet.png" alt="jewelry" /> 
+                                                        </div> 
+                                                        <div class="content-box">
+                                                        <span class="discover-button button-style-2 btn-color-2"> BRACELETS													
+                                                            <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+                                                        </span>
+                                                        </div>
+                                                    </a>  
+                                                </div>
+                                                <div class="product-cart-wrap"> 
+                                                    <a href="">
+                                                        <!-- <h2 class="font-16 margin-0">ABC</h2> -->
+                                                        <div class="ima-box">
+                                                            <img src="./assets/home-necklace.png" alt="jewelry" /> 
+                                                        </div> 
+                                                        <div class="content-box">
+                                                        <span class="discover-button button-style-2 btn-color-2"> NECKLACE												
+                                                            <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+                                                        </span>
+                                                        </div>
+                                                    </a>  
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+									<!--End product Wrap-->									
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- <div class="slider-arrow slider-arrow-2 slick-button-container" id="categorySec-arrows"></div> -->
+				</div> 
+			</div>
+		</section>
+
+		<section id="gift_offersSec" class="commonPadding">
+			<div class="container wow animate__animated animate__fadeIn">
+				<div class="row gfSec_row">
+					<div class="luxury-sub-container">
+						<div class="carousel-item-row-left carousel-content">
+
+							<h2 class="font-70">
+							Where Luxury Meets <br> Unbeatable Value!
+							</h2>
+							<p class="font-30 width-90">
+							Explore our curated selection of dazzling discounts and  elevate your style without breaking the bank.
+							</p>
+							<a class="discover-button white-border-color" href="" >Discover <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+                            </a>
+						</div>
+
+						<div class="carousel-item-row-left">
+							<img class="align-right" src="./assets/luxury-necklace.png" alt="Image">
+						</div>
+                    </div>
+                    <!-- <div class="carousel-item-row-right">      
+                	</div> -->
+				</div>
+		</section>
+
+
+	<section id="gift_offersSec" class="commonPadding">
+		<div class="container">
+		  <!-- <h2>Carousel Example</h2>   -->
+		  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+			
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner carousel-inner2">
+					<div class="item active">
+						<div class="carousel-item-row">
+							<div class="luxury-sub-container">
+								<div class="carousel-item-row-left">
+									<img class="blend-image gift-card-image" src="./assets/gift-card.png" alt="Image">
+								</div>
+								<div class="phone-view margin-t-20">
+									<img class="blend-image gift-card-image" src="./assets/gift-card.png" alt="Image">
+								</div>
+								<div class="carousel-item-row-left carousel-content">
+									<h2 class="font-70">Buy Our Exclusive <br> <span class="brown">Gift Cards</span></h2>
+									<p class="font-30 width-90">Elevate every occasion with the freedom to indulge in exactly what they desire. Give the gift of limitless happiness today!</p>
+									<a class="discover-button" href="">Shop now <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+					<div class="item">
+						<div class="carousel-item-row">
+							<div class="luxury-sub-container">
+								<div class="carousel-item-row-left">
+									<img class="blend-image gift-card-image" src="./assets/gift-card2.png" alt="Image">
+								</div>
+								<div class="phone-view margin-t-20">
+									<img class="blend-image gift-card-image" src="./assets/gift-card2.png" alt="Image">
+								</div>
+								<div class="carousel-item-row-left carousel-content">
+									<h2 class="font-70">Discover Perfect Gifts <br> <span class="brown">Today!</span></h2>
+									<p class="font-30 width-90">Explore our curated collection of captivating gift ideas, sure to delight, inspire and discover the ideal gift for every occasion.</p>
+									<a class="discover-button " href="">Shop now <img class="contain-image font-30" src="./assets/DiscoverButton.png" alt="Discover Button"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="item">
+						<div class="carousel-item-row">
+							<div class="luxury-sub-container">
+								<div class="carousel-item-row-left">
+									<img class="blend-image gift-card-image" src="./assets/gift-card3.png" alt="Image">
+								</div>
+								<div class="phone-view margin-t-20">
+								<img class="blend-image gift-card-image" src="./assets/gift-card3.png" alt="Image">
+								</div>
+								<div class="carousel-item-row-left carousel-content">
+									<h2 class="font-70">Avail Your Discount  <br><span class="brown">Today!</span></h2>
+									<p class="font-30 width-90">Experience the allure of luxury at a fraction of the cost with our special discount offer. Don't miss out – claim yours now!</p>
+									<a class="discover-button" href="">Shop now <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a class="right carousel-control carousel-next-button-container" href="#myCarousel" data-slide="next">
+				<span class="glyphicon slider-btn slider-next slick-arrow carousel-next-button" >    <i class="fas fa-arrow-right"></i>
+                </i></span>
+				<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+		<!-- End Gift and offers -->
+		<!-- Recommended Section -->
+        <section id="RecommendedSec" class="commonPadding">
+			<div class="container wow animate__animated animate__fadeIn">
+				<div class="row mob-sec">
+					<div class="headingRow">
+						<h2>Find Your Sparkle</h2>
+						<h5>Timeless beauty, Endless sparkle</h5>
+					</div>
+				</div>
+				<div class="row categotySec_row">
+					<div class="categotySec_row_left">
+						<div class="headingRow desk-sec">
+							<h2 class="font-30 section-main-heading">Find Your Sparkle</h2>
+						<h5 class="font-16 section-main-subheading">Timeless beauty, Endless sparkle</h5>
+						</div>
+						<div class="sliderSec">
+							<div class="carausel-3-columns-cover"> 
+								<div class="carausel-3-columns carausel-arrow-center" id="categorySec">
+										<div class="slick-list draggable">
+                                            <div class="slick-track">
+                                                <div class="product-cart-wrap"> 
+                                                    <a href="">
+                                                        <h2 class="recommended-headings margin-0 ">Diamonds</h2>
+                                                        <div class="ima-box">
+                                                            <img src="./assets/home-diamond.png" alt="jewelry" /> 
+                                                        </div> 
+                                                        <div class="content-box">
+                                                        <span class="discover-button button-style-2 btn-color-2"> View All												
+                                                            <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+                                                        </span>
+                                                        </div>
+                                                    </a>  
+                                                </div><div class="product-cart-wrap"> 
+                                                    <a href="">
+                                                        <h2 class="recommended-headings margin-0 ">Lab grown diamonds</h2>
+                                                        <div class="ima-box">
+                                                            <img src="./assets/home-labgrown.png" alt="jewelry" /> 
+                                                        </div> 
+                                                        <div class="content-box">
+                                                        <span class="discover-button button-style-2 btn-color-2"> View All													
+                                                            <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+                                                        </span>
+                                                        </div>
+                                                    </a>  
+                                                </div>
+                                                <div class="product-cart-wrap"> 
+                                                    <a href="">
+                                                        <h2 class="recommended-headings margin-0 ">Precious stones</h2>
+                                                        <div class="ima-box">
+                                                            <img src="./assets/home-preciousStone.png" alt="jewelry" /> 
+                                                        </div> 
+                                                        <div class="content-box">
+                                                        <span class="discover-button button-style-2 btn-color-2"> View All													
+                                                            <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+                                                        </span>
+                                                        </div>
+                                                    </a>  
+                                                </div>
+                                                <div class="product-cart-wrap"> 
+                                                    <a href="">
+                                                        <h2 class="recommended-headings margin-0 ">Semi precious stones</h2>
+                                                        <div class="ima-box">
+                                                            <img src="./assets/home-semiPreciousStone.png" alt="jewelry" /> 
+                                                        </div> 
+                                                        <div class="content-box">
+                                                        <span class="discover-button button-style-2 btn-color-2"> View All												
+                                                            <img class="contain-image" src="./assets/DiscoverButton.png" alt="Discover Button">
+                                                        </span>
+                                                        </div>
+                                                    </a>  
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+									<!--End product Wrap-->									
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- <div class="slider-arrow slider-arrow-2 slick-button-container" id="categorySec-arrows"></div> -->
+				</div> 
+			</div>
+		</section>
+		<!-- End Recommended Section -->
+	</main>
+</div>
+
+<!-- Footer Section  -->
+<footer>
+    <div class="pre-footer">
+        <div class="pre-footer-row">
+            <div class="pre-footer-top wow animate__animated animate__fadeInUp" data-wow-delay="0"> 
+                <h2 class="font-30 section-main-heading">Explore Benefits</h2>
+            </div>
+            <div class="pre-footer-mdl wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                <ul>
+                    <li><img src="./assets/free-delivery.png" alt="Free Delivery" loading="lazy"><span>Free Delivery</span></li>
+                    <li><img src="./assets/return-icon.png" alt="Easy Return" loading="lazy">Easy Return</li>
+                    <li><img src="./assets/free-delivery.png" alt="Insured Shipping" loading="lazy">Insured Shipping</li>
+                    <li><img src="./assets/safe-payment.png" alt="Safe & Secured Payments" loading="lazy"><span>Safe & Secured Payments</span>
+                    </li> 
+                </ul>
+            </div>
+            <div class="pre-footer-btm wow animate__animated animate__fadeInUp" >
+            
+                    <a href="" class="discover-button sign-up-20">SIGN UP</a>
+            </div>
+        </div>
+    </div>
+    <div class="footerSec">
+        <div class="container">
+            <div class="footer-row"> 
+                <div class="footer-box wow animate__animated animate__fadeInUp" data-wow-delay="0">
+                    <div class="logo"> 
+                        <a href="" class="logo-footer"><img src="./assets/logo.png" alt="logo" loading="lazy" /></a>
+                    </div>
+                </div>
+                <div class="footer-box wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-list">
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">FAQs</a></li>
+                            <li><a href="">Track Order</a></li>                        
+                            <li><a href="">Our Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-list">
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Ethical Sourcing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                    <h4>Our Policies</h4>
+                    <ul class="footer-list">
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms and Conditions</a></li>
+                            <li><a href="">Security Policy</a></li>                        
+                            <li><a href="">Refund Policy</a></li>
+                            <li><a href="">Pricing Policy</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-box wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                    <h4>Educate yourself</h4>
+                    <ul class="footer-list">
+                            <li><a href="">Stones Info</a></li>
+                            <li><a href="">Diamonds Info</a></li>
+                            <li><a href="">Metals Info</a></li>                        
+                            <li><a href="">Pearls Info</a></li>
+                    </ul>
+                </div>                
+            </div>
+            <div class="footer-row-btm">
+                <div class="footer-box">
+                    <div class="mobile-social-icon">
+                        <a  href="" target="_blank"><img src="./assets/social-media-icons/fb.png" alt="Jewalleria Facebook account"/></a>
+                        <a  href="" target="_blank"><img src="./assets//social-media-icons/insta.png" alt="Jewalleria Instagram account" /></a>
+                        <a  href="" target="_blank"><img src="./assets//social-media-icons/pin.png" alt="Jewalleria Tik-Tok account"/></a>
+                        <a  href="" target="_blank"><img src="./assets/social-media-icons/tiktok.png"/></a>
+                        <a  href="" target="_blank"><img src="./assets/social-media-icons/X.png" alt="Jewalleria"/></a>
+                        <a  href="" target="_blank"><img src="./assets/social-media-icons/sc.png" alt="Jewalleria"/></a>
+                    </div>
+                </div>
+                
+                <div class="footer-box"> 
+                    <p class="font-16">© All right reserved by Hashim</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+</footer>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.discover-button');
+    
+    buttons.forEach(function(button) {
+        var image = button.querySelector('img'); 
+        var originalSrc = image.src;
+        var hoverSrc = './assets/DiscoverButtonWhite.png';
+        button.addEventListener('mouseover', function() {
+            image.src = hoverSrc;
+        });
+        
+        button.addEventListener('mouseout', function() {
+            image.src = originalSrc;
+        });
+    });
+});
+
+</script>
+
+
+
+</body>
+</html>
