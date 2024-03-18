@@ -1,21 +1,22 @@
+
+.dark{
+    background-color: #F1DDCD !important;
+    color: #fff !important;
+}
+
+.light{
+    background-color: #F1DDCD !important;
+    color: #000 !important;
+}
 .main-nav{
     height: 70px;
     position: sticky;
     top: 0;
     z-index: 3;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #9A6555;
+    background-color: #9A6555 !important;
 }
 
-
-.dark{
-    background-color: #000 !important;
-    color: #fff !important;
-}
-
-.light{
-    background-color: #fff !important;
-    color: #000 !important;
-}
 
 .nav-kfc{
     width: 90%;
@@ -35,7 +36,7 @@
 
 .brand-name{
     font-size: 2em;
-    color: red !important;
+    color: rgb(255, 255, 255) !important;
     /* font-style: italic; */
     font-weight: 600;
     font-family:fantasy ;
@@ -49,8 +50,8 @@
 }
 
 .add-employee-button {
-    background-color: red;
-    color: #fff;
+    background: #F1DDCD;
+        color: #000000;
     font-weight: 600;
     font-size: 0.75em;
     /* border-color: #fff; */
@@ -58,10 +59,10 @@
     transition: all 0.3s ease;
 }
 .signin-button{
-    border: 2px solid red;
+    border: 2px solid #F1DDCD;
     border-radius: 5px;
     padding: 5px 15px;
-    background-color: #272727;
+    background-color: #F1DDCD;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,8 +79,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: #000000;
-    border: 2px solid red;
+    background-color: #F1DDCD;
+    border: 2px solid #F1DDCD;
     z-index: 10;
     width: 400px;
     padding: 30px;
@@ -105,13 +106,9 @@
 }
 
 .delete-button{
-    background-color: red !important;
-    color: white !important;
-}
-
-.delete-button:hover{
-    background-color: white !important;
-    color: red !important;
+    background-color: red;
+    color: white;
+    transition: all 0.3s ease;
 }
 
 .review-buttons-container{
@@ -125,9 +122,13 @@
     position: absolute;
     right: 15px;
     top: 15px;
-    color: red;
+    color: white;
     background-color: transparent;
     border: none;
+}
+
+#form-close-button:hover{
+    color: red
 }
 
 hr{
@@ -139,17 +140,44 @@ hr{
     width: 75%;
     margin: 0 auto;
     border-radius: 25px;
-    box-shadow:0 0 10px 1px rgba(255, 0, 0, 0.634);
+    box-shadow:0 0 10px 1px rgba(114, 114, 114, 0.634);
+    background-color: #9A6555 !important;
     padding: 10px 20px;
-    border: 2px solid red;
+    border: 2px solid #9A6555;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.add-employee-button:hover{
-    background-color: red;
-    border-color: red;
-    color: white;
+#createBtn{
+    background-color: #9A6555;
+    border: none;
+    transition: all 0.3s ease;
 }
 
+#createBtn:hover{
+    box-shadow:0 0 5px 1px rgba(133, 67, 0, 0.795);
+    scale: 1.05;
+}
+
+.btn-edit{
+    transition: all 0.3s ease;
+}
+.add-employee-button:hover, .btn-edit:hover{
+    box-shadow:0 0 5px 1px rgba(133, 67, 0, 0.795);
+    scale: 1.05;
+    background-color: #F1DDCD;
+    /* border-color: #9A6555; */
+}
+
+#clearBtn{
+    background-color: red;
+    border-color: #fff;
+    transition: all 0.3s ease;
+
+}
+.delete-button:hover,#clearBtn:hover{
+    scale: 1.05;
+    box-shadow:0 0 5px 1px rgba(255, 25, 25, 0.795);
+
+}
