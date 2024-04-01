@@ -1,0 +1,284 @@
+
+ul{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+body{
+    margin-bottom: 20px;
+}
+
+.header-top{
+    display: flex;
+    width: 100%;
+}
+
+.header-left{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.header-left img{
+    height: 50%;
+    width: 70%;
+}
+
+.header-middle{
+    width: 40%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#imageAlt{
+    color: white;
+    
+    background-color: red;
+}
+.header-middle img{
+    width: 40%;
+}
+
+.header-right{
+    width: 30%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.premium-button{
+    background-color: rgb(255 203 8);
+    border-radius: 25px;
+    border: black;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.header-button{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.header-bottom{
+    background-color: rgb(204 10 23 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.header-bottom ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    gap: 20px;
+    color: white;
+    padding: 5px 0;
+}
+
+main{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main-center{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+.left-col-1{
+    width: 48%;
+    height: 450px;
+}
+
+.left-col-1 h2{
+    width: 90%;
+}
+.left-col-2{
+    width: 48%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+}
+
+.left-col-2 .cust-row-1{
+    display: flex;
+    gap: 15px;
+
+}
+
+.red-line{
+    height: 5px;
+    background-color: rgb(225, 0, 0);
+    color: red;
+    margin: 10px 0;
+}
+
+.left-col-2 .cust-col-1,.left-col-2 .cust-col-2{
+    width: 47%;
+    height: 300px;
+    border: 1px solid rgba(99,99,99,0.5);
+    border-radius: 2px;
+}
+
+.left-col-2 .cust-col-1 h2,.left-col-2 .cust-col-2 h2{
+    font-size: 1.2em;
+    padding: 5px;
+
+}
+
+.cust-row-2{
+    display: flex;
+    gap: 15px;
+}
+
+.cust-row-2 .cust-col-1{
+    border: none;
+    height: 180px;
+}
+
+.cust-row-2 .cust-col-1 h3{
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 0.8em;
+    color: red;
+    text-transform: uppercase;
+
+}
+
+.cust-row-2 .cust-col-1 p{
+    font-size: 1em;
+    font-weight: 500;
+}
+img{
+    max-width: 100%;
+}
+
+.main-section-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-section-2 .div-1{
+    border-top: 5px solid black;
+    height: fit-content;
+    width: 30%;
+    background-color: rgb(232 232 232);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.div-2{
+    border-top: 5px solid black;
+    padding-top: 10px;
+}
+.main-section-2 .div-1 ul{
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+}
+
+.main-section-2 .div-1 ul li {
+    border-bottom: 3px solid black;
+    padding: 5px 0;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.main-section-2 .div-2{
+    width: 65%;
+}
+
+.red{
+    color: red;
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+.no-border{
+    border: none !important;
+}
+
+.div-2-inner-1{
+    display: flex;
+    gap: 10px;
+}
+
+.div-2-inner-1 img{
+    width: 15%;
+    height: 60%;
+}
+
+.div-2-inner-1 div{
+    width: 85%;
+}
+
+.div-2-inner-1 h3{
+    color: red;
+    font-size: 0.75em;
+}
+
+.div-2-inner-1 h4{
+    font-size: 1.3em;
+}
+
+.div-2-inner-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.div-2-inner-2 .cust-col-1,.div-2-inner-2  .cust-col-2{
+    width: 47%;
+    border: 1px solid rgba(99,99,99,0.5);
+    border-radius: 2px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.div-2-inner-2 .cust-col-1 h2,.div-2-inner-2  .cust-col-2 h2{
+    font-size: 1.2em;
+    padding: 5px;
+
+}
+
+.div-2-inner-2 .cust-col-1 p, .div-2-inner-2  .cust-col-2 p{
+    padding: 5px;
+    font-size: 1em;
+    line-height: 120%;
+}
+
+.time{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    opacity: 0.7;
+    font-size: 1em;
+    margin-top: 5px;
+}
