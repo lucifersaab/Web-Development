@@ -22,7 +22,96 @@
 
     <!-- NAVBAR -->
     <div class="sticky">
-        <div class="main-div white-bg">
+        <div class="main-div white-bg mob-sec">
+            <div class="container">  
+                  <div class="header-wrap-top ">
+                      <div class="header-left">
+                        <nav class="navbar ">
+                            <button class="navbar-toggler" type="button" id="sidebarToggle" aria-controls="sidebar-wrapper" aria-expanded="false" aria-label="Toggle sidebar">
+                                <span class="toggle-button-container">
+                                 <img src="./assets/nav-toggle.png" alt="nav Button">
+                                </span>
+                            </button>
+                        </nav>
+                      </div>
+          
+               <div class="header-middle" >
+               <a href=""><img src="./assets/logo.png" alt="logo" /></a>
+          
+               </div> 
+          
+                <div class="header-right">
+                  <div class="jwl-container ">
+                      <form class="jwl-searchbox" onsubmit="return false;">
+                      <!-- @csrf -->
+                        <input type="text" placeholder="Search" name="search" class="jwl-searchbox-input searchInput"  name="mobileHeaderSearch" id="mobileHeaderSearch" maxlength="30">
+                        <input type="button" class="searchInput jwl-searchbox-submit" id="mobHeadSrchBtn" value="" name="mobHeadSrchSubmit" id="mobHeadSrchSubmit" aria-label="Product Search">
+                        <span class="jwl-searchbox-icon" ><i class="fi-rs-search"></i></span>
+                      </form>
+                  </div>
+                  <!-- @if(Route::currentRouteName() == 'user.explore')
+                  <div class="jwl-container" id="mobFilter">
+                    <form class="jwl-searchbox">
+                      <span class="jwl-searchbox-icon" ><i class="fi-rs-filter"></i></span>
+                    </form>
+                  </div>
+                  @endif -->
+          
+                      </div>
+                  </div>
+              <div class="search-mega-row">
+                      <button class="btn" name="closeSearch" id="mobileCloseSearch"><i class="fi-rs-cross"></i></button>
+                      <div class="searchMega-top">
+                          <h5>Popular searches</h5>
+                          <div class="popularLinks-row" id="mobilePopularLinks">					
+                          </div>
+                      </div>
+                      <div class="searchMega-btm">
+                          <div class="searchMega-left-inner">
+                              <h5>Recommended Collections</h5> 
+                              <div class="product-thumbnail-row row" id="mobileSearchMegaDiv">						
+                              </div> 
+                          </div>
+                      </div>
+                      <div class="loadMore-thumbnail" id="mobileSearchLoadMore">				
+                      </div>
+                  </div>
+              <!-- <div id="wrapper">            
+                  <div id="page-content-wrapper">
+                  <div id="sidebar-wrapper" class="bg-light">
+                                  <div class=" navbar-collapse" id="navbarSupportedContent"> -->
+              <div id="wrapperside-nav" class="jewl-header-sidenav">
+                  <div>
+                    <button class="jewl-header-dropdown-btn">
+                    <img class="contain-image jewl-header-fa-caret-down" src="./assets/logo.png" alt="Discover Button">
+                    </button>
+                    <div class="jewl-header-dropdown-container">
+            
+                    
+                        <button class="jewl-header-dropdown-btn font-14">button
+                          <img class="contain-image jewl-header-fa-caret-down no-float " src="./assets/dropdownicon.png" alt="Discover Button">
+                        </button>
+                        
+                        <div class="jewl-header-dropdown-container">
+                       
+                          <a class="dropdown-item font-13" href="">hyperlink</a>
+                        </div>
+                       
+                    </div>
+                    </div>
+                    <div>
+                      <ul class="header-sidenav-bottom">
+                        <h2 class="header-sidenav-bottom-heading">Customer service</h2>
+                        <li> <a href="">Contact Us</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Track Order</a></li>
+                      </ul>
+                    </div>
+          
+                </div>
+            </div>
+          </div>
+        <div class="main-div white-bg laptop-view">
             <div class="container">
                 <div class="header-wrap-top">
                     <div class="header-left"> 
@@ -103,7 +192,7 @@
                 </div> -->
             </div>
         </div>
-        <div class="header-wrap-bottom">
+        <div class="header-wrap-bottom laptop-view">
                      <div class="main_nav sticky-curvy-subnav">
                           <nav class="header-btm-nav nested-menu"> 
                             <ul class="top-list-btm">
@@ -279,15 +368,11 @@
 		</section>
 
 		<!-- FOR PHONE -->
-		<!-- <section class="phone-home-slider">
+		<section class="phone-home-slider mob-sec">
 			<div class="row home-slider-row">
- 			<div id="home-slider-sec" class="home-slider carousel slide carousel-fade" data-bs-ride="carousel">
-                       
-						
-					
-                             <div class="carousel-inner">
-                              
-									<div class="carousel-item">
+ 			<div id="home-slider-sec" class="home-slider carousel slide carousel-fade" data-bs-ride="carousel">			
+                                <div class="carousel-inner">
+									<div class="carousel-item active">
 										<div class="carousel-item-row">
 											<div class="container home-page-container">
 												<div class="sub-container">
@@ -305,8 +390,8 @@
 											</div>
 										</div>
 									</div>                        
-                            </div>
-                            <div class="carousel-inner">
+                                </div>
+                            <!-- <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="carousel-item-row">
                                         <div class="carousel-item-row-left"> <img src="" alt="Default Banner">
@@ -320,10 +405,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 					</div>
 				</div> 
-		</section> -->
+		</section>
 		
 		<!--End Banner-->
 		<!-- Top Categories -->
@@ -427,7 +512,7 @@
                             </a>
 						</div>
 
-						<div class="carousel-item-row-left">
+						<div class="carousel-item-row-left laptop-view">
 							<img class="align-right" src="./assets/luxury-necklace.png" alt="Image">
 						</div>
                     </div>
@@ -453,7 +538,7 @@
 					<div class="item active">
 						<div class="carousel-item-row">
 							<div class="luxury-sub-container">
-								<div class="carousel-item-row-left">
+								<div class="carousel-item-row-left laptop-view">
 									<img class="blend-image gift-card-image" src="./assets/gift-card.png" alt="Image">
 								</div>
 								<div class="phone-view margin-t-20">
@@ -471,7 +556,7 @@
 					<div class="item">
 						<div class="carousel-item-row">
 							<div class="luxury-sub-container">
-								<div class="carousel-item-row-left">
+								<div class="carousel-item-row-left laptop-view">
 									<img class="blend-image gift-card-image" src="./assets/gift-card2.png" alt="Image">
 								</div>
 								<div class="phone-view margin-t-20">
@@ -489,7 +574,7 @@
 					<div class="item">
 						<div class="carousel-item-row">
 							<div class="luxury-sub-container">
-								<div class="carousel-item-row-left">
+								<div class="carousel-item-row-left laptop-view">
 									<img class="blend-image gift-card-image" src="./assets/gift-card3.png" alt="Image">
 								</div>
 								<div class="phone-view margin-t-20">
@@ -603,7 +688,7 @@
 </div>
 
 <!-- Footer Section  -->
-<footer>
+<footer class="laptop-view">
     <div class="pre-footer">
         <div class="pre-footer-row">
             <div class="pre-footer-top wow animate__animated animate__fadeInUp" data-wow-delay="0"> 
@@ -713,3 +798,119 @@
 
 </body>
 </html>
+
+
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const wrapper = document.getElementById('wrapperside-nav');
+    
+    sidebarToggle.addEventListener('click', function() {
+      wrapper.classList.toggle('show-side-nav');
+    });
+  </script>
+
+<script>
+    const searchButton = document.getElementById('mobHeadSrchSubmit');
+    // const searchFormWrapper = document.getEleme('jwl-searchbox');
+    
+    searchButton.addEventListener('click', function() {
+      searchFormWrapper.classList.toggle('width-100');
+    });
+
+
+    window.addEventListener("scroll", function() {
+      console.log("scrolling")
+      searchFormWrapper.classList.remove('jwl-searchbox-open');
+
+    });
+
+  </script>
+
+
+
+<script>
+
+var dropdown = document.getElementsByClassName("jewl-header-dropdown-btn");
+var i;
+
+
+for (i = 0; i < dropdown.length; i++) {
+  var dropdownToggles = document.querySelectorAll('.jewl-header-dropdown-btn');
+
+dropdownToggles.forEach(function(toggle) {
+    toggle.addEventListener("click", function() {
+        var dropdownContent = this.nextElementSibling;
+        var nestedContents = dropdownContent.querySelectorAll('.jewl-header-dropdown-container');
+        var totalHeight = dropdownContent.scrollHeight;
+
+        nestedContents.forEach(function(nestedContent) {
+            totalHeight += nestedContent.scrollHeight;
+        });
+        var caretIcon = this.querySelector('.jewl-header-fa-caret-down');
+
+        if (dropdownContent.style.maxHeight) {
+            dropdownContent.style.maxHeight = null;
+            caretIcon.style.transform = "rotate(0deg)";
+
+        } else {
+            dropdownContent.style.maxHeight = totalHeight + "px";
+            caretIcon.style.transform = "rotate(180deg)";
+
+        }
+    });
+});
+
+
+}
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  let submitIcon = document.querySelector('.jwl-searchbox-icon');
+  let inputBox = document.querySelector('.jwl-searchbox-input');
+  let searchBox = document.querySelector('.jwl-searchbox');
+  let submitButton = document.querySelector('.jwl-searchbox-submit');
+  let isOpen = false;
+
+  submitIcon.addEventListener("click", function() {
+    let str = document.querySelector(`[id="mobileHeaderSearch"]`).value;
+    let thisLngth = str.trim().length;
+    if (!isOpen) {
+      searchBox.classList.add('jwl-searchbox-open');
+      inputBox.classList.add('search-border');
+      submitButton.style.visibility = 'visible';
+      inputBox.focus();
+      isOpen = true;
+    } else {
+      searchBox.classList.remove('jwl-searchbox-open');
+      inputBox.classList.remove('search-border');
+
+      inputBox.blur();
+      isOpen = false;
+    }
+  });
+
+
+  window.addEventListener("scroll", function() {
+      console.log("scrolling");
+      searchBox.classList.remove('jwl-searchbox-open');
+      inputBox.classList.remove('search-border');
+
+    });
+
+  function buttonUp() {
+    var inputVal = inputBox.value.trim().length;
+    if (inputVal !== 0) {
+    } else {
+      inputBox.value = '';
+    }
+  }
+
+  inputBox.addEventListener("keyup", buttonUp);
+});
+
+
+</script>
+
+			 <!-- </div>
+		</div> -->
