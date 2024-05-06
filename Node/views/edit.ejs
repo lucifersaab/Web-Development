@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6ede132488.js" crossorigin="anonymous"></script>   
+    <script src="/js/edit.js"></script>
+    <link rel="stylesheet" href="/css/edit.css">
+    <title>Edit product</title>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="preview-container">
+            <h2>Preview</h2>
+            <div class="single-product">
+                <div class="image-container">
+                   <img id="path" src="/assets/<%= product?.path %>" alt="product image">
+                </div>
+                <h3 id="name"><%=product?.name%> <span class="type-container" id="orders">(<%=product?.orders%>)</span></h3>
+                <p class="type-container" id="type">Category: <%=product?.type%></p>
+
+                <p id="price">Price: Rs.<%=product?.price%>/-</p>
+                <p id="description" style="font-size: smaller; width: 100%; overflow: hidden;"><%=product?.description%></p>
+                
+            </div>
+        </div>
+        
+        <div class="form-container">
+            <div class="product-form-container" >
+                <form id="createForm" method="post">
+                    <h2 style="margin-bottom: 2px;">Enter details</h2>
+                    <div class="form-group">
+                        <label for="createTitle">Product name</label>
+                        <input type="text" class="form-control" required placeholder="Product name" value="<%= product?.name %>" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="createTitle">Price</label>
+                        <input type="number" class="form-control" required placeholder="Price of the product" value="<%= product?.price %>" name="price">
+                    </div>
+                    <div class="form-group">
+                        <label for="createTitle">Orders</label>
+                        <input type="number" class="form-control" required placeholder="Number of orders"value="<%= product?.orders %>" name="orders">
+                    </div>
+                    <div class="form-group">
+                        <label for="createTitle">Type</label>
+                        <input type="text" class="form-control" required placeholder="Product type"value="<%= product?.type %>" name="type">
+                    </div>
+                    <div class="form-group">
+                        <label for="createTitle">Path</label>
+                        <input type="text" class="form-control" required placeholder="File path" value="<%= product?.path %>" name="path">
+                    </div>
+                    <div class="form-group">
+                        <label for="createContent">Description</label>
+                        <textarea  class="form-control" id="createComment" rows="3" required placeholder="Product description"  name="description"><%=product?.description%></textarea>
+                    </div>
+                    <button id="createBtn" type="submit" class="confirm-button">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

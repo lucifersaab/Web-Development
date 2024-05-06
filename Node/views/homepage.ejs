@@ -13,7 +13,7 @@
     <script src="./js/slick.js" ></script>
     <script src="./js/main.js" ></script>
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="/media/jfc-logo.png">
     <title>Jewellaria</title>
 </head>
@@ -24,39 +24,30 @@
     <div class="sticky">
         <div class="main-div white-bg mob-sec">
             <div class="container">  
-                  <div class="header-wrap-top ">
-                      <div class="header-left">
+                <div class="header-wrap-top ">
+                    <div class="header-left">
                         <nav class="navbar ">
                             <button class="navbar-toggler" type="button" id="sidebarToggle" aria-controls="sidebar-wrapper" aria-expanded="false" aria-label="Toggle sidebar">
                                 <span class="toggle-button-container">
-                                 <img src="./assets/nav-toggle.png" alt="nav Button">
+                                 <!-- <img src="./assets/nav-toggle.png" alt="nav Button"> -->
                                 </span>
                             </button>
                         </nav>
-                      </div>
+                    </div>
           
-               <div class="header-middle" >
-               <a href=""><img src="./assets/logo.png" alt="logo" /></a>
+                <div class="header-middle" >
+                <a href=""><img src="./assets/logo.png" alt="logo" /></a>
+            
+                </div> 
           
-               </div> 
-          
-                <div class="header-right">
-                  <div class="jwl-container ">
-                      <form class="jwl-searchbox" onsubmit="return false;">
-                      <!-- @csrf -->
-                        <input type="text" placeholder="Search" name="search" class="jwl-searchbox-input searchInput"  name="mobileHeaderSearch" id="mobileHeaderSearch" maxlength="30">
-                        <input type="button" class="searchInput jwl-searchbox-submit" id="mobHeadSrchBtn" value="" name="mobHeadSrchSubmit" id="mobHeadSrchSubmit" aria-label="Product Search">
-                        <span class="jwl-searchbox-icon" ><i class="fi-rs-search"></i></span>
-                      </form>
-                  </div>
-                  <!-- @if(Route::currentRouteName() == 'user.explore')
-                  <div class="jwl-container" id="mobFilter">
-                    <form class="jwl-searchbox">
-                      <span class="jwl-searchbox-icon" ><i class="fi-rs-filter"></i></span>
-                    </form>
-                  </div>
-                  @endif -->
-          
+                    <div class="header-right">
+                        <div class="jwl-container ">
+                            <form class="jwl-searchbox" >
+                                <input type="text" placeholder="Search" name="search" class="jwl-searchbox-input searchInput"  name="mobileHeaderSearch" id="mobileHeaderSearch" maxlength="30">
+                                <input type="button" class="searchInput jwl-searchbox-submit" id="mobHeadSrchBtn" value="" name="mobHeadSrchSubmit" id="mobHeadSrchSubmit" aria-label="Product Search">
+                                <span class="jwl-searchbox-icon" ><i class="fi-rs-search"></i></span>
+                            </form>
+                        </div>
                       </div>
                   </div>
               <div class="search-mega-row">
@@ -115,7 +106,9 @@
             <div class="container">
                 <div class="header-wrap-top">
                     <div class="header-left"> 
-                        
+                        <a class="contactus-container" href="\contactus">
+                            <i class="fas fa-envelope"></i> Contact us
+                        </a>
                     </div>
                     <div class="header-middle">
                         <a href=""><img src="./assets/logo.png" alt="logo" /></a>

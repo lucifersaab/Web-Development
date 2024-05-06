@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://kit.fontawesome.com/6ede132488.js" crossorigin="anonymous"></script>    
+    <title>Jewalleria</title>
+</head>
+    <body>
+        <div class="main-container">
+            <nav>
+                <div class="nav-left">
+                    <div class="welcome-container">
+                        Welcome Admin!
+                    </div>
+                    <div class="controls">
+                        <a href="/admin/newproduct" id="add-product" class="add-product-button">Add Product</a>
+                    </div>
+                    <div class="heading">
+                        <h2>Current Products:  <%= total %></h2>
+                    </div>
+                    
+                </div>
+                <div class="nav-middle">
+                    <h2>Page</h2>
+                    <ul class="pagination">
+
+                        <% for( let index = 1; index <= totalPages; index++ ) { %>
+                            <li style="display: inline;">
+                                <a class="page-number <%= index === page ? 'current-page' : '' %>" href="/admin/<%= index %>"><%= index %></a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+
+                <div class="nav-right">
+                    <div class="logout-container">
+                        <a href="\adminlogin"><i class="far fa-user"></i>Logout</a>
+                    </div>
+                </div>
+            </nav>
+            <div>
+                
+                <div class="products-container">
+                        <% for( let index = 0; index < products.length; index++ ) { %>
+                            <div class="single-product">
+                                <!-- <h3 class="game-title"><%= products[index].title %></h3> -->
+                                <div class="image-container">
+                                    <img src="./assets/<%=products[index]?.path%>" alt="">
+                                </div>
+                                <h3><%=products[index].name%></h3>
+                                <p>Total orders: <%=products[index].orders%></p>
+                                <p style="font-size: 12px; margin:10px;"><i>Open in edit mode to see description</i></p>
+                                <div class="product-controls"><a class="edit" href="/admin/<%= products[index]._id %>/edit">Edit</a>
+                                    <a class="delete" href="/admin/<%= products[index]._id %>/delete">Delete</a></div>
+                            </div>
+                        <% } %>
+                </div>
+            </div>            
+        </div>
+    </body>
+</html>

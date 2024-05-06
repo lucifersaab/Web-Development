@@ -1,18 +1,24 @@
 const express = require("express");
 const mongoose = require("mongoose")
 let server=express();
-// server.set("view engine","ejs")
-server.set("view engine","ejs")
-server.use(express.static("public"));
 server.use(express.json());
-// let jewelleryAPI=require("./API/jewelry")
+server.use(express.urlencoded());
+server.set("view engine", "ejs");
+server.use(express.static('public'));
+server.use(express.static('assets'))
 
-let jewelleryAPI=require("./routes/API/jewelry")
+let jewelleryAPI=require("./routes/api/jewelry")
 
 server.use("/",jewelleryAPI)
 
 mongoose.connect("mongodb://localhost:27017").then(()=>{
     console.log("connected db")
+})
+
+server.get("/adminlogin",function(req,res){
+
+    res.render("adminlogin")
+
 })
 
 server.get("/contactus",function(req,res){
@@ -21,9 +27,15 @@ server.get("/contactus",function(req,res){
 
 })
 
+server.get("/reviews",function(req,res){
+
+    res.render("reviewpage")
+
+})
+
+
 server.get("/",function(req,res){
-    // res.send("Hello people")
-    // res.send({name:"Hashim", age:"21"})
+
     res.render("homepage")
 
 })
