@@ -44,15 +44,20 @@ body{
 .add-product-button{
     background: var(--secondary-color);
     color: var(--primary-color);
-    padding: 5px;
+    padding: 15px;
     border-radius: 10px;
     border: 2px solid var(--tertiary-color);
     font-weight: 600;
-    font-size: 0.75em;
+    font-size: 1em;
     width: 110px;
     transition: all 0.3s ease;
     text-decoration: none;
     text-align: center;
+    transition: all 0.5s ease;
+}
+
+.add-product-button:hover{
+    scale: 1.05;
 }
 .welcome-container,.logout-container{
     font-size: 30px;

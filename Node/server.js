@@ -21,6 +21,12 @@ server.get("/adminlogin",function(req,res){
 
 })
 
+server.get("/productlist",function(req,res){
+
+    res.render("productlist")
+
+})
+
 server.get("/contactus",function(req,res){
 
     res.render("contactus")

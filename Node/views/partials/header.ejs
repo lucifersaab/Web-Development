@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Jewelleria</title>
+</head>
+<body>
+
+    <div class="sticky">
+        <div class="main-div white-bg mob-sec">
+            <div class="container">  
+                <div class="header-wrap-top ">
+                    <div class="header-left">
+                        <nav class="navbar ">
+                            <button class="navbar-toggler" type="button" id="sidebarToggle" aria-controls="sidebar-wrapper" aria-expanded="false" aria-label="Toggle sidebar">
+                                <span class="toggle-button-container">
+                                 <!-- <img src="./assets/nav-toggle.png" alt="nav Button"> -->
+                                </span>
+                            </button>
+                        </nav>
+                    </div>
+          
+                <div class="header-middle" >
+                <a href=""><img src="./assets/logo.png" alt="logo" /></a>
+            
+                </div> 
+          
+                    <div class="header-right">
+                        <div class="jwl-container ">
+                            <form class="jwl-searchbox" >
+                                <input type="text" placeholder="Search" name="search" class="jwl-searchbox-input searchInput"  name="mobileHeaderSearch" id="mobileHeaderSearch" maxlength="30">
+                                <input type="button" class="searchInput jwl-searchbox-submit" id="mobHeadSrchBtn" value="" name="mobHeadSrchSubmit" id="mobHeadSrchSubmit" aria-label="Product Search">
+                                <span class="jwl-searchbox-icon" ><i class="fi-rs-search"></i></span>
+                            </form>
+                        </div>
+                      </div>
+                  </div>
+              <div class="search-mega-row">
+                      <button class="btn" name="closeSearch" id="mobileCloseSearch"><i class="fi-rs-cross"></i></button>
+                      <div class="searchMega-top">
+                          <h5>Popular searches</h5>
+                          <div class="popularLinks-row" id="mobilePopularLinks">					
+                          </div>
+                      </div>
+                      <div class="searchMega-btm">
+                          <div class="searchMega-left-inner">
+                              <h5>Recommended Collections</h5> 
+                              <div class="product-thumbnail-row row" id="mobileSearchMegaDiv">						
+                              </div> 
+                          </div>
+                      </div>
+                      <div class="loadMore-thumbnail" id="mobileSearchLoadMore">				
+                      </div>
+                  </div>
+              <!-- <div id="wrapper">            
+                  <div id="page-content-wrapper">
+                  <div id="sidebar-wrapper" class="bg-light">
+                                  <div class=" navbar-collapse" id="navbarSupportedContent"> -->
+              <div id="wrapperside-nav" class="jewl-header-sidenav">
+                  <div>
+                    <button class="jewl-header-dropdown-btn">
+                    <img class="contain-image jewl-header-fa-caret-down" src="./assets/logo.png" alt="Discover Button">
+                    </button>
+                    <div class="jewl-header-dropdown-container">
+            
+                    
+                        <button class="jewl-header-dropdown-btn font-14">button
+                          <img class="contain-image jewl-header-fa-caret-down no-float " src="./assets/dropdownicon.png" alt="Discover Button">
+                        </button>
+                        
+                        <div class="jewl-header-dropdown-container">
+                       
+                          <a class="dropdown-item font-13" href="">hyperlink</a>
+                        </div>
+                       
+                    </div>
+                    </div>
+                    <div>
+                      <ul class="header-sidenav-bottom">
+                        <h2 class="header-sidenav-bottom-heading">Customer service</h2>
+                        <li> <a href="">Contact Us</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Track Order</a></li>
+                      </ul>
+                    </div>
+          
+                </div>
+            </div>
+          </div>
+        <div class="main-div white-bg laptop-view">
+            <div class="container">
+                <div class="header-wrap-top">
+                    <div class="header-left"> 
+                        <a class="contactus-container" href="\contactus">
+                            <i class="fas fa-envelope"></i> Contact us
+                        </a>
+                    </div>
+                    <div class="header-middle">
+                        <a href=""><img src="./assets/logo.png" alt="logo" /></a>
+                    </div>
+                    <div class="header-right">
+                        <div class="main_nav">
+                            <div class="header-btm-nav header-action-row">
+                                <div class="searchSec">
+                                    <form>
+                                        <label for="headerSearch"></label>
+                                        <input type="text" class="searchInput" placeholder="Search" name="headerSearch" id="headerSearch" maxlength="30">
+                                        <button type="button" name="headSrchSubmit" id="headSrchSubmit" aria-label="Product Search"><i class="fa-solid fa-search"></i></button> 
+                                    </form> 
+                                </div>
+                                <div class="header-action-icon">
+                                    <a id="mini-wishlist" aria-label="wishlist page"><i class="fa-regular fa-heart"></i></a>							
+                                </div>
+                                <div class="header-action-icon">
+                                    <a class="mini-cart-icon" id="mini-cart" aria-label="cart page"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+
+                                    </a>
+                                </div>
+                                <div class="header-action-icon header-action-icon-end dropdown">
+                                        <!-- <a aria-label="user account page" href=""><i class="fi-rs-user"></i></a>                                  -->
+                                        <a href=" " class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-user"></i></a> 
+                                        <div class="cart-dropdown-wrap  account-dropdown dropdown-menu">
+                                            <ul>
+                                                <li> <a href=""><i class="fi fi-rs-user mr-10"></i>Account</a> </li>
+                                                <li> <a href=""><i class="fi fi-rs-id-badge mr-10"></i>Profile</a> </li>
+                                                <li> <a href=""><i class="fi fi-rs-shopping-bag mr-10"></i>Orders</a> </li>
+                                                <li> <a href=""><i class="fi fi-rs-following mr-10"></i>Wishlist</a> </li>
+                                                <li> <a href="" ><i class="fi fi-rs-sign-out mr-10"></i>Logout</a> </li>
+                                                <form id="head-logout-form" class="d-none"></form>                                      
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-wrap-top mob-sec">
+                    <div class="header-left">
+                        <a href="">
+                            <img class="m-screen" src="" alt="logo" />
+                            <img class="s-screen" src="" alt="logo" />
+                        </a>
+                    </div> 
+                    <div class="header-right">
+                        <div class="searchSec">
+                            <form>
+                                <span class="file" id="mobHeaderImageSearch"><i class="fi-rs-camera"></i><input type="file" name="file" aria-labelledby="mobHeaderImageSearch"/></span>
+                                <input type="text" class="searchInput" placeholder="Search" name="mobHeaderSearch" id="mobHeaderSearch" maxlength="30">
+                                <button type="submit" name="mobHeadSrchSubmit" id="mobHeadSrchSubmit" aria-label="Product Search"><i class="fi-rs-search"></i></button> 
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap-bottom laptop-view">
+                     <div class="main_nav sticky-curvy-subnav">
+                          <nav class="header-btm-nav nested-menu"> 
+                            <ul class="top-list-btm">
+                                <li><a href="">Rings</a>
+                                    <ul class="btm-list">
+                                        <li>
+                                            <div class="mega-row">
+                                                <div class="mega-empty-space"></div>
+                                                <div class="mega-row-left">
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Ring</li>
+                                                                <li><a href="">Diamond Ring</a></li>
+                                                                <li><a href="">Black Diamond Ring</a></li>
+                                                                <li><a href="">Lab Grown Diamond</a></li>
+                                                        </ul>
+                                                    </div>	
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Ring</li>
+                                                                <li><a href="">Diamond Ring</a></li>
+                                                                <li><a href="">Black Diamond Ring</a></li>
+                                                                <li><a href="">Lab Grown Diamond</a></li>
+                                                        </ul>
+                                                    </div>	
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Ring</li>
+                                                                <li><a href="">Diamond Ring</a></li>
+                                                                <li><a href="">Black Diamond Ring</a></li>
+                                                                <li><a href="">Lab Grown Diamond</a></li>
+                                                        </ul>
+                                                    </div>											
+                                                </div>
+                                                
+                                                <div class="mega-row-right">
+                                                    <div class="megaRow-box-ad">
+                                                        <img src="./assets/home-ring.png" alt="" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>	
+                                <li><a href="">Earrings</a>
+                                    <ul class="btm-list">
+                                        <li>
+                                            <div class="mega-row">
+                                                <div class="mega-empty-space"></div>
+                                                <div class="mega-row-left">
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Earring</li>
+                                                                <li><a href="">Diamond Earring</a></li>
+                                                                <li><a href="">Black Diamond Earring</a></li>
+                                                                <li><a href="">Lab Grown Earring</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Earring</li>
+                                                                <li><a href="">Diamond Earring</a></li>
+                                                                <li><a href="">Black Diamond Earring</a></li>
+                                                                <li><a href="">Lab Grown Earring</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Earring</li>
+                                                                <li><a href="">Diamond Earring</a></li>
+                                                                <li><a href="">Black Diamond Earring</a></li>
+                                                                <li><a href="">Lab Grown Earring</a></li>
+                                                        </ul>
+                                                    </div>												
+                                                </div>
+                                                <div class="mega-row-right">
+                                                    <div class="megaRow-box-ad">
+                                                        <img src="./assets/home-earring.png" alt="" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>	
+                                <li><a href="">Bracelets</a>
+                                    <ul class="btm-list">
+                                        <li>
+                                            <div class="mega-row">
+                                                <div class="mega-empty-space"></div>
+                                                <div class="mega-row-left">
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Bracelets</li>
+                                                                <li><a href="">Diamond Bracelets</a></li>
+                                                                <li><a href="">Black Diamond Bracelets</a></li>
+                                                                <li><a href="">Lab Grown Bracelets</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Bracelets</li>
+                                                                <li><a href="">Diamond Bracelets</a></li>
+                                                                <li><a href="">Black Diamond Bracelets</a></li>
+                                                                <li><a href="">Lab Grown Bracelets</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megaRow-box-list">
+                                                        <ul>
+                                                            <li>Diamond Bracelets</li>
+                                                                <li><a href="">Diamond Bracelets</a></li>
+                                                                <li><a href="">Black Diamond Bracelets</a></li>
+                                                                <li><a href="">Lab Grown Bracelets</a></li>
+                                                        </ul>
+                                                    </div>											
+                                                </div>
+                                                <div class="mega-row-right">
+                                                    <div class="megaRow-box-ad">
+                                                        <img src="./assets/home-bracelet.png" alt="" /> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>							
+                            </ul>
+                          </nav>
+                     </div>
+        </div>
+    </div>
+    
+</body>
+</html>

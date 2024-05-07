@@ -18,7 +18,7 @@ function displayReviews(){
                 <div>${review.createdAt}</div>
                 <div><i> ${review.Comments}</i></div>
                 <div class="review-buttons-container">
-                    <button class="signin-button add-employee-button btn btn-info btn-sm mr-2 btn-edit " data-id="${review.id}">Edit</button>
+                    <button class="signin-button add-employee-button btn-edit " data-id="${review.id}">Edit</button>
                     <button class="signin-button add-employee-button  btn-del delete-button" data-id="${review.id}">Delete</button>
                 </div>
             </div>
