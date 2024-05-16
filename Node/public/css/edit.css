@@ -18,7 +18,7 @@ body{
 .main-container{
     width: 85%;
     display: flex;
-    height: 70vh;
+    /* height: 70vh; */
     box-shadow: 0 0 10px 4px rgba(139, 139, 139, 0.3);
 }
 

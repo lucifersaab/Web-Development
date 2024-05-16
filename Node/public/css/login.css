@@ -27,7 +27,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70%;
+    /* height: 70%; */
 }
 
 .container h1{
@@ -37,9 +37,9 @@ body{
 .container form{
     flex-direction: column;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     height: 70%;
 }
 
