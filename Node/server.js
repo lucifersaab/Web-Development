@@ -6,7 +6,11 @@ server.use(express.urlencoded());
 server.set("view engine", "ejs");
 server.use(express.static('public'));
 server.use(express.static('assets'))
-
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
+server.use(cookieParser());
+server.use(session({ secret: "Its  a secret" }));
+const isAuthenticated = require("./Middleware/isAuthenticated");
 let jewelleryAPI=require("./routes/api/jewelry")
 let userAPI=require("./routes/site/user");
 server.use("/",userAPI)
@@ -24,7 +28,7 @@ server.get("/contactus",function(req,res){
     res.render("contactus")
 })
 
-server.get("/reviews",function(req,res){
+server.get("/reviews",isAuthenticated,function(req,res){
     res.render("reviewpage")
 })
 
