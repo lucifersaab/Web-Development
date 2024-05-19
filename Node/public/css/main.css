@@ -1741,3 +1741,55 @@ line-height: normal;
     font-size: 30px;
 }
 
+.flash-message{
+    position: absolute;
+    top: -130px;
+    background-color: rgb(0, 0, 0);
+    color: #000;
+    animation: floatin 2s ease;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.danger{
+    color: red;
+    border: 3px solid red;
+}
+
+.success{
+    color: green;
+    border: 3px solid green;
+}
+
+
+@keyframes floatin {
+    0%{
+        top: -130px;
+    }
+    20%{
+        top: 10px ;
+    }
+    80%{
+        top: 10px;
+    }
+    100%{
+        top: -130px;
+    }
+    
+}
+
+.cart-number-container{
+    position: absolute;
+    padding: 2px;
+    border-radius: 50%;
+    right: -10px;
+    color: white;
+    height: 14px;
+    width: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* font-size: 7px; */
+    background-color: red;
+}

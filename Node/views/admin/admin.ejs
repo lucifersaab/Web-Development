@@ -39,10 +39,11 @@
 
                 <div class="nav-right">
                     <div class="logout-container">
-                        <a href="\login\admin"><i class="far fa-user"></i>Logout</a>
+                        <a href="\logout"><i class="far fa-user"></i>Logout</a>
                     </div>
                 </div>
             </nav>
+            <%- include ('../partials/flashMessage') %>
             <div>
                 
                 <div class="products-container">
@@ -50,7 +51,7 @@
                             <div class="single-product">
                                 <!-- <h3 class="game-title"><%= products[index].title %></h3> -->
                                 <div class="image-container">
-                                    <img src="./assets/<%=products[index]?.path%>" alt="">
+                                    <img src="/assets/<%=products[index]?.path%>" alt="">
                                 </div>
                                 <h3><%=products[index].name%></h3>
                                 <p>Total orders: <%=products[index].orders%></p>
