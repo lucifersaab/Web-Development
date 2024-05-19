@@ -15,4 +15,20 @@ router.get("/product/:type?", async (req, res) => {
 
     res.render("productlist", { products, type: productType });
 });
+
+
+router.post('/cart-products', async (req, res) => {
+    const { productIds } = req.body;
+    if (!productIds || productIds.length === 0) {
+        return res.json([]);
+    }
+
+    try {
+        const products = await Jewellery.find({ '_id': { $in: productIds } });
+        res.json(products);
+    } catch (error) {
+        console.error('Error fetching products:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
 module.exports = router;

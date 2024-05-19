@@ -54,9 +54,6 @@ router.post("/register/admin", async (req, res) => {
 });
 
 
-
-
-
 router.post("/admin/newproduct", async (req, res) => {
     let data = req.body;
     let record = new Jewelery(data);
@@ -118,6 +115,8 @@ router.get("/admin/:page?",isAuthenticated, async (req, res) => {
       page,
       pageSize,
       totalPages,
+      user:true,
+      
     });
 });
 
