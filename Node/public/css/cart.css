@@ -30,6 +30,7 @@
 
 .summary-container{
     width: 100%;
+    text-align: center;
 }
 .single-summary{
     display: flex;

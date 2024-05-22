@@ -15,7 +15,7 @@ router.post("/login/admin", async (req, res) => {
       res.flash("danger", "User not found");
       return res.redirect("/register/admin");
     }
-    const isValid = bcrypt.compare(req.body.password, user.password);
+    const isValid = bcrypt.compareSync(req.body.password, user.password);
     if (!isValid) {
       res.flash("danger", "Invalid Password");
       return res.redirect("/login/admin");

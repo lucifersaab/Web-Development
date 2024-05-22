@@ -19,7 +19,7 @@ router.get("/product/:type?", async (req, res) => {
 
 router.post('/cart-products', async (req, res) => {
     const { productIds } = req.body;
-    if (!productIds || productIds.length === 0) {
+    if (!productIds || productIds.length == 0) {
         return res.json([]);
     }
 
