@@ -46,4 +46,8 @@ server.get('/cart-products', async (req, res) => {
     res.render("cartPage",{layout:true})
 });
 
+server.use((req, res, next) => {
+    res.status(404).render('404', { title: 'Page Not Found' });
+});
+
 server.listen(3000);

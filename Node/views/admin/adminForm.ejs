@@ -7,16 +7,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/admin.css">
-    <link rel="stylesheet" href="/css/login.css"> 
-    <script src="/js/login.js"></script>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js" defer></script>
     <% if(page === "register") { %>
         <title>Register</title>
-        <% } else { %>
+    <% } else { %>
         <title>Login</title>
-        <% } %> 
+    <% } %> 
 </head>
 <style>
-    .paragraph{
+    .paragraph {
         color: white;
         text-decoration: none;
     }
@@ -28,19 +28,22 @@
             <% if(page === "register") { %>
                 <h1>Admin Registration</h1>
             <% } else { %>
-                <h1>Admin login</h1>
+                <h1>Admin Login</h1>
             <% } %> 
-            <form method="post" id="loginForm">
+            <form method="post" id="authForm">
                 <% if(page === "register") { %>
                     <input id="name" type="text" name="name" placeholder="Enter name">
+                    <input type="hidden" name="formType" value="register">
+                <% } else { %>
+                    <input type="hidden" name="formType" value="login">
                 <% } %>
                 <input id="username" type="text" name="username" placeholder="Enter Username">
                 <input id="password" type="password" name="password" placeholder="Enter password">
                 <% if(page === "register") { %>
-                    <button id="login-button" type="submit" class="confirm-button">Register</button>
-                    <% } else { %>
-                    <button id="login-button" type="submit" class="confirm-button">Login</button>
-                    <% } %> 
+                    <button id="auth-button" type="submit" class="confirm-button">Register</button>
+                <% } else { %>
+                    <button id="auth-button" type="submit" class="confirm-button">Login</button>
+                <% } %> 
                 <% if(page === "register") { %>
                     <p class="paragraph">Already have an account? <b><a href="/login/admin">Login</a></b></p>
                 <% } else { %>

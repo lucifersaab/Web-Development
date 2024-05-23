@@ -4,26 +4,36 @@ let User = require("../../Model/User");
 let Jewelery = require("../../Model/Jewels");
 const isAuthenticated = require("../../Middleware/isAuthenticated");
 const bcrypt = require('bcryptjs');
+require('dotenv').config();
+const JWT_SECRET = process.env.JWT_SECRET;
+const jwt = require('jsonwebtoken');
 
+console.log(JWT_SECRET)
 router.get("/login/admin", async (req, res) => {
     return res.render("admin/adminForm",{page:"login"})
 })
 
 router.post("/login/admin", async (req, res) => {
+  try {
     let user = await User.findOne({ username: req.body.username });
     if (!user) {
-      res.flash("danger", "User not found");
+      req.flash("danger", "User not found");
       return res.redirect("/register/admin");
     }
     const isValid = bcrypt.compareSync(req.body.password, user.password);
     if (!isValid) {
-      res.flash("danger", "Invalid Password");
+      req.flash("danger", "Invalid Password");
       return res.redirect("/login/admin");
     }
+    const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET, { expiresIn: '1h' });
     req.session.user = user;
     res.flash("success", user.name + " Logged In");
-    return res.redirect("/admin");
-  });
+    res.json({ token, user });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
   router.get("/logout", (req, res) => {
     req.session.user = null;
@@ -76,7 +86,7 @@ router.post("/admin/:id/edit", async (req, res) => {
     product.name = req.body.name;
     product.price = req.body.price;
     product.orders= req.body.orders;
-    product.path=req.body.path;
+    product.path=req.body.path?req.body.path:"placeholder.png";
     product.type=req.body.type;
     product.description=req.body.description;
     await product.save();

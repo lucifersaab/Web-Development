@@ -21,38 +21,60 @@
     <div class="main-container">
         <div class="sidebar-container">
             <h1>Apply Filters</h1>
-            <div class="row-1">
-                <h2>Price</h2>
-                <div></div>
-            </div>
-            
-        </div>
-        <div class="pageview-container">
-    <div class="products-container">
-        <% if (products.length > 0) { %>
-            <% for (let index = 0; index < products.length; index++) { %>
-                <div class="single-product">
-                    <div class="image-container">
-                        <img src="/assets/<%= products[index]?.path %>" alt="">
+            <form id="filterForm" method="GET">
+                <div class="row-1">
+                    <div class="filter-row">
+                        <h2>Price</h2>
+                        <div class="input-container">
+                            <input type="text" name="minValue" placeholder="Min Price"> -
+                            <input type="text" name="maxValue" placeholder="Max Price">
+                        </div>
                     </div>
-                    <h3><%= products[index].name %></h3>
-                    <p>Pkr <%= products[index].price %>/-</p>
-                    <p>Orders: <%= products[index].orders %></p>
-                    <p><%= products[index].description %></p>
-                    <div class="product-controls">
-                        <a href="#" class="add-to-cart-button" data-product-id="<%= products[index]._id %>">Add to cart</a>
+                    <div class="filter-row">
+                        <h2>Orders</h2>
+                        <div class="input-container">
+                            <input type="text" name="minOrders" placeholder="Min Orders"> -
+                            <input type="text" name="maxOrders" placeholder="Max Orders">
+                        </div>
+                    </div>
+                    <div class="input-container-button">
+                        <button type="submit">Apply</button>
                     </div>
                 </div>
-            <% } %>
-        <% } else { %>
-            <p>No products found.</p>
-        <% } %>
-    </div>
-</div>
-
-            
+            </form>
+        </div>
+    
+        
+        <div class="pageview-container">
+            <div class="products-container">
+                <% if (products.length > 0) { %>
+                    <% for (let index = 0; index < products.length; index++) { %>
+                        <div class="single-product">
+                            <div class="image-container">
+                                <img src="/assets/<%= products[index]?.path %>" alt="">
+                            </div>
+                            <h3><%= products[index].name %></h3>
+                            <p>Pkr <%= products[index].price %>/-</p>
+                            <p>Orders: <%= products[index].orders %></p>
+                            <p><%= products[index].description %></p>
+                            <div class="product-controls">
+                                <a href="#" class="add-to-cart-button" data-product-id="<%= products[index]._id %>">Add to cart</a>
+                            </div>
+                        </div>
+                        <% } %>
+                        
+                <% } else { %>
+                    <p>No products found.</p>
+                <% } %>
+            </div>
         </div>
     </div>
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const filterForm = document.getElementById("filterForm");
+            const currentUrl = window.location.pathname;
+            filterForm.action = currentUrl;
+        });
+    </script>
 </body>
 </html>

@@ -14,7 +14,11 @@
                         <div class="single-product">
                             <!-- <h3 class="game-title"><%= products[index].title %></h3> -->
                             <div class="image-container">
+                                <!-- <% if(products[index].path){%> -->
                                     <img src="/assets/<%=products[index]?.path%>" alt="">
+                                    <!-- <% } else{%>
+                                        <img src="/assets/placeholder.png" alt="">
+                                    <% } %> -->
                             </div>
                             <h3><%=products[index].name%></h3>
                             <p>Total orders: <%=products[index].orders%></p>

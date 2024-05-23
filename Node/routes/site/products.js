@@ -5,15 +5,36 @@ let Jewellery = require("../../Model/Jewels");
 
 router.get("/product/:type?", async (req, res) => {
     const productType = req.params.type;
-    let products;
+    const { minValue, maxValue, minOrders, maxOrders } = req.query;
+
+    let query = {};
 
     if (productType) {
-        products = await Jewellery.find({ type: productType });
-    } else {
-        products = await Jewellery.find();
+        query.type = productType;
     }
 
-    res.render("productlist", { products, type: productType });
+    if (minValue) {
+        query.price = { ...query.price, $gte: Number(minValue) };
+    }
+
+    if (maxValue) {
+        query.price = { ...query.price, $lte: Number(maxValue) };
+    }
+
+    if (minOrders) {
+        query.orders = { ...query.orders, $gte: Number(minOrders) };
+    }
+
+    if (maxOrders) {
+        query.orders = { ...query.orders, $lte: Number(maxOrders) };
+    }
+
+    try {
+        const products = await Jewellery.find(query);
+        res.render("productlist", { products });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
 });
 
 
