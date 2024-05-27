@@ -1,0 +1,244 @@
+:root {
+    --primary-color: #5d3a20;
+    --secondary-color: #e8c5aa;
+    --tertiary-color: #fff;
+    --font: "Roboto Serif"
+}
+
+body{
+    margin: 0;
+    font-family: var(--font);
+}
+.main-container nav{
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    display: flex;
+}
+.nav-left{
+    width: 45%;
+    display: flex;
+}
+.nav-right{
+    width: 45%;
+}
+.nav-middle{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-middle h2,ul{
+    margin: 5px;
+    font-size: 16px;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.add-product-button{
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--tertiary-color);
+    font-weight: 600;
+    font-size: 1em;
+    width: 110px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.add-product-button:hover{
+    scale: 1.05;
+}
+.welcome-container,.logout-container{
+    font-size: 30px;
+    font-family: var(--font);
+    padding: 30px;
+}
+
+.nav-left .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.pagination{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.logout-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logout-container a{
+    text-decoration: none;
+    color: var(--tertiary-color);
+    display: flex;
+    gap:15px;
+}
+
+.products-container{
+    width: 95%;
+    margin: 0 auto;
+    /* background-color: #ff0000; */
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.single-product{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 10px 5px rgba(23,23,23,0.2);
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    /* margin-bottom: 10px; */
+}
+
+.single-product .image-container {
+    width: 100%; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    position: relative;
+    overflow: hidden;
+  }
+  
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.single-product h3,p{
+    margin: 0;
+    align-self: flex-start;
+}
+
+/* .single-product h3{
+} */
+
+.single-product .product-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    /* position: relative; */
+    bottom: 0;
+    /* padding: 10px; */
+
+}
+
+.single-product .product-controls a{
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.product-controls .delete{
+    background-color: red;
+}
+
+.product-controls .edit{
+    background-color: black;
+}
+
+.main-container nav{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.pagination{
+    background-color: var(--tertiary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    height: 20%;
+    align-self: center;
+}
+.page-number{
+    text-decoration: none;
+}
+
+.current-page{
+    background-color: #e8c5aa;
+    color: var(--tertiary-color);
+    padding: 0 5px;
+    border-radius: 50%;
+}
+
+.flash-message{
+    position: absolute;
+    top: -130px;
+    background-color: rgb(0, 0, 0);
+    color: #000;
+    animation: floatin 5s ease;
+    padding: 10px 20px;
+    width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 10;
+    left: calc(50% - 150px);
+}
+
+.danger{
+    color: red;
+    border: 3px solid red;
+}
+
+.success{
+    color: green;
+    border: 3px solid green;
+}
+
+
+@keyframes floatin {
+    0%{
+        top: -130px;
+    }
+    20%{
+        top: 10px ;
+    }
+    80%{
+        top: 10px;
+    }
+    100%{
+        top: -130px;
+    }
+    
+}

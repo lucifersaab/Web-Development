@@ -1,0 +1,31 @@
+<nav>
+    <div class="nav-left">
+        <div class="welcome-container">
+            Welcome Admin!
+        </div>
+        <div class="controls">
+            <a href="/admin/newproduct" id="add-product" class="add-product-button">Add Product</a>
+        </div>
+        <div class="heading">
+            
+        </div>
+        
+    </div>
+    <div class="nav-middle">
+        <h2>Page</h2>
+        <ul class="pagination">
+
+            <% for( let index = 1; index <= totalPages; index++ ) { %>
+                <li style="display: inline;">
+                    <a class="page-number <%= index === page ? 'current-page' : '' %>" href="/admin/<%= index %>"><%= index %></a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+
+    <div class="nav-right">
+        <div class="logout-container">
+            <a href="\logout"><i class="far fa-user"></i>Logout</a>
+        </div>
+    </div>
+</nav>

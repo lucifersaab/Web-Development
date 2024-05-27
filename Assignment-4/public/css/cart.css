@@ -1,0 +1,125 @@
+.cart-page-container{
+    width: 100%;
+    display: flex;
+    margin-top: -35px;
+}
+
+.sidebar-container{
+    width: 25%;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 75px);
+    top: 0;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar-container h2,.total-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9A6555;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.summary-container{
+    width: 100%;
+    text-align: center;
+}
+.single-summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 30px;
+    border-bottom: 1px solid gray;
+}
+
+.single-summary p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.total-container{
+    font-size: 30px;
+
+}
+.product-cart-container{
+    margin-top: 70px;
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.single-product-cart{
+    width: 70%;
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px 2px rgba(45, 45, 45, 0.2);
+    border-radius: 10px;
+    height: 175px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    background-color: #9A6555;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-product-cart .image-container{
+    width: 20%;
+    max-height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: -10px;
+}
+.single-product-cart .image-container img{
+    /* object-fit: contain; */
+    max-height: 100%;
+}
+
+.content-container{
+    width: 70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+}
+
+.product-heading{
+    font-size: 20px;
+}
+
+.content-container p{
+    font-size: 16px;
+}
+
+.buttons-container{
+    display: flex;
+    align-items: center;
+}
+
+.buttons-container button{
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.total-container{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    background-color: #9A6555;
+}

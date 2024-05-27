@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/contactus.css">
+
+</head>
+<body>
+  <section class="contact-us-top">
+    <div>
+      <h2>
+        Questions? Let's make them as radiant as our jewels! </h2>
+        <h3> Reach out and let's glow together. </h3>
+    </div>
+  </section>
+    <section class="contactus-section">
+        <div class="col-md-12 col-lg-10 col-xl-10 mx-auto mb-4 contactus-container">
+            <div class="white-container">
+              <h2 class="contactus-heading">Contact us</h2>
+              <form id="contact-form"class="contactus-inner-container" onsubmit="formsubmit();">
+                <input class="contact-input" id="nameInput"   placeholder="Enter your name"  type="text">
+                <input class="contact-input" id="emailInput"  placeholder="Enter your email" type="email">
+                  <select class="contact-input">
+                    <option class="options-class" selected disabled id="select-gender" value="" >Select Gender</option>
+                    <option class="options-class" id="male" value="male" >Male</option>
+                    <option class="options-class" id="female" value="female">Female</option>
+                  </select>
+                <input class="contactus-button" type="submit">
+              </form>
+            </div>
+            <div class="red-container">
+              <div class="height-100">
+                <div class="find-us-div">
+                <h2>Find us at</h2> 
+                <div>
+                  Address: <br>
+                  123 Elegance Avenue, Suite 100 <br>
+                  Luxury District, New York, NY 10001
+                </div>
+                <div>
+                  Store Hours: <br>
+                  Monday - Saturday: 10:00 AM - 7:00 PM <br>
+                  Sunday: 12:00 PM - 5:00 PM
+                </div>
+                
+                <div class="mobile-social-icon">
+                  <a  href="" target="_blank"><img src="./contact-page-assets/social-media-icons/fb.png" alt="Jewalleria Facebook account"/></a>
+                  <a  href="" target="_blank"><img src="./contact-page-assets//social-media-icons/insta.png" alt="Jewalleria Instagram account" /></a>
+                  <a  href="" target="_blank"><img src="./contact-page-assets//social-media-icons/pin.png" alt="Jewalleria Tik-Tok account"/></a>
+                  <a  href="" target="_blank"><img src="./contact-page-assets/social-media-icons/tiktok.png"/></a>
+                  <a  href="" target="_blank"><img src="./contact-page-assets/social-media-icons/X.png" alt="Jewalleria"/></a>
+                  <a  href="" target="_blank"><img src="./contact-page-assets/social-media-icons/sc.png" alt="Jewalleria"/></a>
+              </div>
+              </div>
+              <!-- <div class="image-container">
+                <img class="contain-image" src="./contact-page-assets/home-bracelet.png" alt="">
+              </div> -->
+            </div>
+            <div class="top-div">
+              <div class="mapouter">
+                <div class="osm_canvas">
+                    <iframe width="100%" height="100%" id="osm_canvas" src="about:blank" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <script>
+                        document.getElementById('osm_canvas').contentDocument.write('<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.css" />');
+                        document.getElementById('osm_canvas').contentDocument.write('<script src = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.js"><\/script>');
+                        document.getElementById('osm_canvas').contentDocument.write('<div id ="osm-map" style = "width:421px; height:541px;"></div>');
+                        document.getElementById('osm_canvas').contentDocument.write('<script>var mapOptions={center:[31.40226085, 74.20941558435783],zoom:10,attributionControl: true}; var map = new L.map("osm-map", mapOptions); map.attributionControl.setPrefix(\'&copy; <a target="_blank" href="https://www.openstreetmap.org/copyright" rel="nofollow noopener noreferrer">OpenStreetMap</a>\'); var layer = new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");map.addLayer(layer);let marker = new L.Marker([31.40226085, 74.20941558435783]);marker.addTo(map).bindPopup(\'COMSATS Institute of Information Technology<br/>Gujjar Avenue\'); marker.on(\'mouseover\',function(ev) {marker.openPopup();});<\/script>');
+                        document.getElementById('osm_canvas').contentDocument.close();
+                    </script>
+                    <a href="https://online.stopwatch-timer.net/">timer for kids</a><br>
+                    <a href="https://textcaseconvert.com/"></a><br>
+                    <style>.mapouter{position: relative;text-align: right;height: 100%;width: 100%;}</style>
+                    <a href="https://www.mapembed.net/openstreetmap">openstreetmap satellite map</a>
+                    <style>.osm_canvas{overflow: hidden;background: none !important;height: 100%;width: 100%;}</style>
+                </div>
+              </div>
+            </div>
+              <!-- <div class="height-50">
+                
+              </div> -->
+            </div>
+        </div>
+    </section>
+
+   
+  
+      <script>
+        function formsubmit(){
+          event.preventDefault();
+          var name=$("#nameInput");
+          var email=$("#emailInput");
+          console.log(name.val());
+          if(!name.val()){
+            name.addClass("error-field");
+          }
+          else{
+            name.removeClass("error-field")
+          }
+          if(!email.val()){
+            email.addClass("error-field");
+          }
+          else{
+            email.removeClass("error-field")
+          }
+          if(name.val() && email.val()){
+            alert("Query sent successfully!")
+            document.getElementById("contact-form").reset();
+          }
+  
+          
+        }
+      </script>
+    
+</body>
+</html>
