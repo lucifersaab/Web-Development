@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin.css">
+       
+
+        <div class="main-container">
+            <%- include ('../partials/adminHeader') %>
+            <%- include ('../partials/flashMessage') %>
+            <div class="products-container">
+                    <% for( let index = 0; index < products.length; index++ ) { %>
+                        <div class="single-product">
+                            <!-- <h3 class="game-title"><%= products[index].title %></h3> -->
+                            <div class="image-container">
+                                <!-- <% if(products[index].path){%> -->
+                                    <img src="/assets/<%=products[index]?.path%>" alt="">
+                                    <!-- <% } else{%>
+                                        <img src="/assets/placeholder.png" alt="">
+                                    <% } %> -->
+                            </div>
+                            <h3><%=products[index].name%></h3>
+                            <p>Total orders: <%=products[index].orders%></p>
+                            <p style="font-size: 12px; margin:10px;"><i>Open in edit mode to see description</i></p>
+                            <div class="product-controls"><a class="edit" href="/admin/<%= products[index]._id %>/edit">Edit</a>
+                                <a class="delete" href="/admin/<%= products[index]._id %>/delete">Delete</a></div>
+                        </div>
+                    <% } %>
+            </div>
+        </div>
+    </body>
+</html>
