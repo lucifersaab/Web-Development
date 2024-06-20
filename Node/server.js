@@ -50,4 +50,4 @@ server.use((req, res, next) => {
     res.status(404).render('404', { title: 'Page Not Found' });
 });
 
-server.listen(3000);
+server.listen(3000,()=>{console.log("server is up!")});
